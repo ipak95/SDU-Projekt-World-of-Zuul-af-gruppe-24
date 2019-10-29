@@ -55,8 +55,13 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println("Welcome to our game");
+        System.out.println("In this game you will learn about solar cells and how ecofriendly energi-sources can help save the environment.");
+        System.out.println("Throughout this game you will learn about ecofriendly energy and how you can help fight the disasters that");
+        System.out.println("coal and other co2 emission energy-sources is creating.");
+        System.out.println("You will have to collect parts which ultimately allows you to create a working solar cell and thous ");
+        System.out.println(" winning this game.");
+        System.out.println(" ");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
@@ -123,5 +128,5 @@ public class Game
         else {
             return true;
         }
-    }
+    }   
 }
