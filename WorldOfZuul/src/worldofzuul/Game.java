@@ -105,7 +105,9 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
-            
+            case LOOK:
+                lookAround(command);
+                break;
             case PICKUP:
                 // ADD CODE
                 break;
@@ -176,4 +178,14 @@ public class Game
             return true;
         }
     }
+        private void lookAround(Command command) {
+        if(!command.hasSecondWord()) {
+            System.out.println("Look where?  (Hint: around)");
+    } else {
+        String description = command.getSecondWord(); 
+        
+            System.out.println(currentRoom.getLongDescription());
+        }  
+        
+}
 }
