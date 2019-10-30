@@ -20,11 +20,12 @@ public class Room
 
     public boolean doesRoomHasPerson() {
         return roomHasPerson;
+         //True = Yes / False = No
     }
     
 
     public void setRoomHasPerson(boolean roomHasPerson) {
-        this.roomHasPerson = roomHasPerson;
+        this.roomHasPerson = roomHasPerson; 
     }
     
 
