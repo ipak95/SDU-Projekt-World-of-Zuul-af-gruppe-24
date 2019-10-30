@@ -9,12 +9,15 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits;
+    private boolean roomHasPerson;
 
-    public Room(String description) 
+    public Room(String description, boolean hasPerson) 
     {
         this.description = description;
         exits = new HashMap<String, Room>();
+        this.roomHasPerson = hasPerson;
     }
+    
 
     public void setExit(String direction, Room neighbor) 
     {
