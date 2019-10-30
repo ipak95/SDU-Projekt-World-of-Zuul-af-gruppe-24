@@ -17,28 +17,45 @@ public class Game
 
     private void createRooms()
     {
-        Room outside, theatre, pub, lab, office;
-      
-        outside = new Room("outside the main entrance of the university", false);
-        theatre = new Room("in a lecture theatre", true);
-        pub = new Room("in the campus pub", false);
-        lab = new Room("in a computing lab", true);
-        office = new Room("in the computing admin office", false);
+        Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
         
-        outside.setExit("east", theatre);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
+        home = new Room("In your home, where it's all calm and safe", false, 1);
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, 2);
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, 3);
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, 4);
+        station = new Room("At the station, where it's just as noisy as downtown", false, 5);
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, 6);
+        mall = new Room("At the mall, a good place to spend your hard earned money", false, 7);
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, 8);
+        university = new Room("In the university, where knowledge is aquired or used", false, 9);
+        
+        //"Mapping out" all the rooms and how the are connected (setExit)
+        home.setExit("north", downtown);
 
-        theatre.setExit("west", outside);
+        downtown.setExit("west", beach);
+        downtown.setExit("east", harbour);
+        downtown.setExit("north", park);
+        downtown.setExit("south", home);
 
-        pub.setExit("east", outside);
+        beach.setExit("east", downtown);
 
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
+        harbour.setExit("north", station);
+        harbour.setExit("west", downtown);
+        
+        station.setExit("south", harbour);
 
-        office.setExit("west", lab);
+        park.setExit("south", downtown);
+        park.setExit("north", mall);
+        
+        mall.setExit("south", park);
+        mall.setExit("north", rooftop);
+        mall.setExit("west", university);
+        
+        rooftop.setExit("south", mall);
+        
+        university.setExit("east", mall);
 
-        currentRoom = outside;
+        currentRoom = home;
     }
 
     public void play() 
@@ -51,7 +68,7 @@ public class Game
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
-        System.out.println("Thank you for playing.  Good bye.");
+        System.out.println("Thank you for playing.  Goodbye.");
     }
 
     private void printWelcome()

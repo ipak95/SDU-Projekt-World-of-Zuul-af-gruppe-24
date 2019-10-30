@@ -10,12 +10,14 @@ public class Room
     private String description;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
+    private int roomNumber;
 
-    public Room(String description, boolean hasPerson) 
+    public Room(String description, boolean hasPerson, int number) 
     {
         this.description = description;
         exits = new HashMap<String, Room>();
         this.roomHasPerson = hasPerson;
+        this.roomNumber = number;
     }
 
     public boolean doesRoomHasPerson() {
