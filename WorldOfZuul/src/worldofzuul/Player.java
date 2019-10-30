@@ -7,10 +7,6 @@ package worldofzuul;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author daniel
- */
 public class Player {
     
     private ArrayList<Item> inventory = new ArrayList<Item>();
