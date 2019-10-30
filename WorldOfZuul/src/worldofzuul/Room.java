@@ -17,6 +17,10 @@ public class Room
         exits = new HashMap<String, Room>();
         this.roomHasPerson = hasPerson;
     }
+
+    public void setRoomHasPerson(boolean roomHasPerson) {
+        this.roomHasPerson = roomHasPerson;
+    }
     
 
     public void setExit(String direction, Room neighbor) 
