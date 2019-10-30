@@ -1,5 +1,7 @@
 package worldofzuul;
 
+import static worldofzuul.CommandWord.HELP;
+
 public class Game 
 {
     private Parser parser;
@@ -72,24 +74,49 @@ public class Game
         boolean wantToQuit = false;
 
         CommandWord commandWord = command.getCommandWord();
+        
+        switch (commandWord) {
 
-        if(commandWord == CommandWord.UNKNOWN) {
-            System.out.println("I don't know what you mean...");
-            return false;
+            case HELP:
+                printHelp();
+                break;
+            
+            case GO:
+                goRoom(command);
+                break;
+            
+            case QUIT:
+                wantToQuit = quit(command);
+                break;
+            
+            case PICKUP:
+                // ADD CODE
+                break;
+            
+            case TALK:
+                // ADD CODE
+                break;
+                
+            case A:
+                // ADD CODE
+                break;
+            
+            case B:
+                // ADD CODE
+                break;
+                
+            case C:
+                // ADD CODE
+                break;
+                
+            case D:
+                // ADD CODE
+                break;
+                
+            default:
+                System.out.println("I don't know what you mean...");
         }
-
-        if (commandWord == CommandWord.HELP) {
-            printHelp();
-        }
-        else if (commandWord == CommandWord.GO) {
-            goRoom(command);
-        }
-        else if (commandWord == CommandWord.QUIT) {
-            wantToQuit = quit(command);
-        }
-        /*else if (commandWord == CommandWord.PICKUP) {
-            if () 
-        } */
+        
         return wantToQuit;
     }
 
@@ -131,5 +158,5 @@ public class Game
         else {
             return true;
         }
-    }   
+    }
 }
