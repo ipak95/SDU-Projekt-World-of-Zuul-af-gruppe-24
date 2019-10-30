@@ -17,15 +17,15 @@ public class Game
     {
         Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
         
-        home = new Room("In your home, where it's all calm and safe", false);
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true);
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false);
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false);
-        station = new Room("At the station, where it's just as noisy as downtown", false);
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false);
-        mall = new Room("At the mall, a good place to spend your hard earned money", false);
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false);
-        university = new Room("In the university, where knowledge is aquired or used", false);
+        home = new Room("In your home, where it's all calm and safe", false, 1);
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, 2);
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, 3);
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, 4);
+        station = new Room("At the station, where it's just as noisy as downtown", false, 5);
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, 6);
+        mall = new Room("At the mall, a good place to spend your hard earned money", false, 7);
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, 8);
+        university = new Room("In the university, where knowledge is aquired or used", false, 9);
         
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
