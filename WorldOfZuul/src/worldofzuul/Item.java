@@ -1,7 +1,9 @@
 package worldofzuul;
 
 public class Item {
-    
+
+    // hej
+   
     private String name;
 
     public Item(String name) {
@@ -11,5 +13,4 @@ public class Item {
     public String getName() {
         return name;
     }
-    
 }
