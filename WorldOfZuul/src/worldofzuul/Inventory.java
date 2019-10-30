@@ -9,5 +9,4 @@ public class Inventory {
     public ArrayList<Item> getInventory() {
         return inventory;
     }
-
 }
