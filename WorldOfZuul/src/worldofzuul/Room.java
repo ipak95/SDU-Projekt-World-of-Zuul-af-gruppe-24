@@ -18,6 +18,11 @@ public class Room
         this.roomHasPerson = hasPerson;
     }
 
+    public boolean doesRoomHasPerson() {
+        return roomHasPerson;
+    }
+    
+
     public void setRoomHasPerson(boolean roomHasPerson) {
         this.roomHasPerson = roomHasPerson;
     }

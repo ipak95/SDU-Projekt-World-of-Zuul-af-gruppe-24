@@ -1,8 +1,6 @@
 package worldofzuul;
 
 public class Item {
-
-    // hej
    
     private String name;
 
