@@ -58,5 +58,8 @@ public class Room
     {
         return exits.get(direction);
     }
+    
+    NPC question1 = new NPC("Halloj, this is sporgsmol number 1");
+    
 }
 

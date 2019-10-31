@@ -19,11 +19,11 @@ public class Game {
         downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true);
         beach = new Room("At the beach, where the calming sound of the waves embraces you", false);
         harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false);
-        station = new Room("At the station, where it's just as noisy as downtown", false);
+        station = new Room("At the station, where it's just as noisy as downtown", true);
         park = new Room("In the park, a small oasis in the middle of this concrete jungle", false);
         mall = new Room("At the mall, a good place to spend your hard earned money", false);
         rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false);
-        university = new Room("In the university, where knowledge is aquired or used", false);
+        university = new Room("In the university, where knowledge is aquired or used", true);
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -105,7 +105,7 @@ public class Game {
                 break;
 
             case TALK:
-                // ADD CODE
+                talkTo(command);
                 break;
 
             case A:
@@ -173,5 +173,18 @@ public class Game {
             System.out.println(currentRoom.getLongDescription());
         }
 
+    }
+
+    private void talkTo (Command command) {
+        if (command.hasSecondWord()) {
+            System.out.println("What are you trying to do?   (Hint: Talk)");
+        } else {
+            if (currentRoom.doesRoomHasPerson() == true) {
+                System.out.println(currentRoom.question1.getQuestion());
+            } else {
+                System.out.println("There's no one to talk to");
+            }
+        }
+        
     }
 }

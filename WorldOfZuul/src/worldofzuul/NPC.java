@@ -6,9 +6,15 @@
 package worldofzuul;
 
 public class NPC {
-    private int roomNumber;
-    
-    public NPC (){
-        
+
+    private String question;
+
+    public NPC(String question) {
+        this.question = question;
     }
+
+    public String getQuestion() {
+        return question;
+    }    
+  
 }
