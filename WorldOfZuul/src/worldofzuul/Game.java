@@ -100,7 +100,7 @@ public class Game {
             case LOOK:
                 lookAround(command);
                 break;
-            case PICKUP:
+            case PICK:
                 // ADD CODE
                 break;
 
