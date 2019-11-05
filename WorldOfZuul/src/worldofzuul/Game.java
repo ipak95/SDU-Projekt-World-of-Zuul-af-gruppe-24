@@ -179,7 +179,12 @@ public class Game {
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
-            if (currentRoom.doesRoomHasPerson() == true) {
+            if (currentRoom.doesRoomHasPerson() == true) { /*{
+                switch (question) {
+                    case A:
+                        //code
+                        break;
+                }*/
                 System.out.println(currentRoom.question1.getQuestion());
             } else {
                 System.out.println("There's no one to talk to");
