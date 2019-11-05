@@ -167,12 +167,11 @@ public class Game {
     }
 
     private void lookAround(Command command) {
-        if (!command.hasSecondWord()) {
-            System.out.println("Look where?  (Hint: around)");
-        } else {
+        if (command.hasSecondWord() && command.getSecondWord().equals("around"))  {
             System.out.println(currentRoom.getLongDescription());
+        } else {
+            System.out.println("Look where?  (Hint: around)");
         }
-
     }
 
     private void talkTo (Command command) {
