@@ -23,11 +23,13 @@ public class Command
 {
     private CommandWord commandWord;
     private String secondWord;
+    private boolean moreWords;
 
-    public Command(CommandWord commandWord, String secondWord)
+    public Command(CommandWord commandWord, String secondWord, boolean moreWords)
     {
         this.commandWord = commandWord;
         this.secondWord = secondWord;
+        this.moreWords = moreWords;
     }
 
     public CommandWord getCommandWord()
@@ -40,6 +42,9 @@ public class Command
         return secondWord;
     }
 
+    public boolean isMoreWords() {
+        return moreWords;
+    }
     public boolean isUnknown()
     {
         return (commandWord == CommandWord.UNKNOWN);
