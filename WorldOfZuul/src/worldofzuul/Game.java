@@ -21,14 +21,14 @@ public class Game {
                 + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
                 + " fuels to power all of these eletronics. Lets go downtown and find out!");
         
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "hej");
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "hej2");
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "hej3");
-        station = new Room("At the station, where it's just as noisy as downtown", true,"hej4");
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false,"hej5");
-        mall = new Room("At the mall, a good place to spend your hard earned money", false,"hej6");
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false,"hej7");
-        university = new Room("In the university, where knowledge is aquired or used", true,"hej8");
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "insert long description please");
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "insert long description please");
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please");
+        station = new Room("At the station, where it's just as noisy as downtown", true,"insert long description please");
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false,"insert long description please");
+        mall = new Room("At the mall, a good place to spend your hard earned money", false,"insert long description please");
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false,"insert long description please");
+        university = new Room("In the university, where knowledge is aquired or used", true,"insert long description please");
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
