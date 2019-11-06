@@ -21,7 +21,7 @@ public class Game {
                 + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
                 + " fuels to power all of these eletronics. Lets go downtown and find out!");
         
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "look around");
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "look around please");
         beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "insert long description please");
         harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please");
         station = new Room("At the station, where it's just as noisy as downtown", true,"insert long description please");
