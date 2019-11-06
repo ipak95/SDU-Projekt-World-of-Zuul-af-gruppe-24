@@ -183,7 +183,7 @@ public class Game {
         }
     }
 
-    private void talkTo(Command command) throws InterruptedException {
+    private void talkTo(Command command) {
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
