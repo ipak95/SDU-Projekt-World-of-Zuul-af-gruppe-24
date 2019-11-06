@@ -15,15 +15,20 @@ public class Game {
     private void createRooms() {
         Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
 
-        home = new Room("In your home, where it's all calm and safe", false);
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true);
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false);
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false);
-        station = new Room("At the station, where it's just as noisy as downtown", true);
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false);
-        mall = new Room("At the mall, a good place to spend your hard earned money", false);
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false);
-        university = new Room("In the university, where knowledge is aquired or used", true);
+        home = new Room("In your home, where it's all calm and safe", false,
+                "It is your room. The radio is on with your favorite song. The light from your lightbulb is shining bright" + "\n"
+                + ", almost blinding you. The coffee is almost done and you sit and turns on the tv. This is when you" + "\n"
+                + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
+                + " fuels to power all of these eletronics. Lets go downtown and find out!");
+        
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "hej");
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "hej2");
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "hej3");
+        station = new Room("At the station, where it's just as noisy as downtown", true,"hej4");
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false,"hej5");
+        mall = new Room("At the mall, a good place to spend your hard earned money", false,"hej6");
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false,"hej7");
+        university = new Room("In the university, where knowledge is aquired or used", true,"hej8");
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -76,7 +81,7 @@ public class Game {
         System.out.println(" ");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
-        System.out.println(currentRoom.getLongDescription());
+        System.out.println(currentRoom.getShortDescription());
     }
 
     private boolean processCommand(Command command) {
@@ -153,7 +158,7 @@ public class Game {
             System.out.println("There is no door!");
         } else {
             currentRoom = nextRoom;
-            System.out.println(currentRoom.getLongDescription());
+            System.out.println(currentRoom.getShortDescription());
         }
     }
 
@@ -167,18 +172,19 @@ public class Game {
     }
 
     private void lookAround(Command command) {
-        if (command.hasSecondWord() && command.getSecondWord().equals("around"))  {
+        if (command.hasSecondWord() && command.getSecondWord().equals("around")) {
             System.out.println(currentRoom.getLongDescription());
         } else {
             System.out.println("Look where?  (Hint: around)");
         }
     }
 
-    private void talkTo (Command command) {
+    private void talkTo(Command command) {
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
-            if (currentRoom.doesRoomHasPerson() == true) { /*{
+            if (currentRoom.doesRoomHasPerson() == true) {
+                /*{
                 switch (question) {
                     case A:
                         //code
@@ -189,6 +195,6 @@ public class Game {
                 System.out.println("There's no one to talk to");
             }
         }
-        
+
     }
 }
