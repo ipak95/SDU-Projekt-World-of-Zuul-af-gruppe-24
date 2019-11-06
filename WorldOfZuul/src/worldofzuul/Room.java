@@ -9,16 +9,33 @@ public class Room
 {
     private String description;
     private String longDescription;
+    private String question;
+    private String answers;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
+    
 
-    public Room(String description, boolean hasPerson, String longDescription) 
+    public Room(String description, boolean hasPerson, String longDescription, String question) 
     {
         this.description = description;
         this.longDescription = longDescription;
         exits = new HashMap<String, Room>();
         this.roomHasPerson = hasPerson;
+        this.question = question;
     }
+
+    public String getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(String answers) {
+        this.answers = answers;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+    
 
     public boolean doesRoomHasPerson() {
         return roomHasPerson;
@@ -60,8 +77,6 @@ public class Room
     {
         return exits.get(direction);
     }
-    
-    NPC question1 = new NPC("Halloj, this is sporgsmol number 1");
     
 }
 
