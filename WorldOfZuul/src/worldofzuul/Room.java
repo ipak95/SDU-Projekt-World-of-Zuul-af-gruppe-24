@@ -8,12 +8,14 @@ import java.util.Iterator;
 public class Room 
 {
     private String description;
+    private String longDescription;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
 
-    public Room(String description, boolean hasPerson) 
+    public Room(String description, boolean hasPerson, String longDescription) 
     {
         this.description = description;
+        this.longDescription = longDescription;
         exits = new HashMap<String, Room>();
         this.roomHasPerson = hasPerson;
     }
@@ -34,12 +36,12 @@ public class Room
         exits.put(direction, neighbor);
     }
 
-    public String getShortDescription()
+    public String getLongDescription()
     {
-        return description;
+        return longDescription;
     }
 
-    public String getLongDescription()
+    public String getShortDescription()
     {
         return "You are " + description + ".\n" + getExitString();
     }
