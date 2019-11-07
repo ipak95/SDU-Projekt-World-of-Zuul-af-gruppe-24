@@ -184,15 +184,13 @@ public class Game {
     }
 
     private void talkTo(Command command) {
-        // CommandWord commandWord = command.getCommandWord();
-        //Scanner reader2 = new Scanner(System.in);
+        CommandWord commandWord = command.getCommandWord();
+        Scanner reader2 = new Scanner(System.in);
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
             if (currentRoom.doesRoomHasPerson() == true) {
                 System.out.println(currentRoom.getQuestion());
-                System.out.println("");
-                System.out.println(currentRoom.getAnswers());
                 System.out.println("");
                 System.out.println("(Type A, B, C or D to answer)");
                 /*switch (commandWord) {
