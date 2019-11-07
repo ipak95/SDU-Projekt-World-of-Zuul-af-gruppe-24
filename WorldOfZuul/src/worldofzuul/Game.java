@@ -22,18 +22,28 @@ public class Game extends Player {
                 + ", almost blinding you. The coffee is almost done and you sit and turns on the tv. This is when you" + "\n"
                 + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
                 + " fuels to power all of these eletronics. Lets go downtown and find out!",
-                "", 0);
+                "", "", 0);
 
         downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "Insert Long Desprition here",
-                "What alternative fuelsource could provide eletricity to this town, instead of using fossilfuels?", 2);
+                "What alternative fuelsource could provide eletricity to this town, instead of using fossilfuels?",
+                "A: Solar panels" + "\n" + "B: Just use more fossilefuel" + "\n" + "C: Windmills" + "\n" + "D: Nuclear powerplants ", 1);
 
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "", 3);
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", 4);
-        station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please", "", 2);
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", 6);
-        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", 7);
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", 8);
-        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here", 9);
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "", "", 3);
+        
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", "Answers to question here", 4);
+
+        station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please",
+                "Hello sir, what type of transportation method would you like to use today?" + "\n"
+                + " If you choose our most environmentally friendly choice, I'll give you a reward!",
+                "A: Taxe" + "\n" + "B: El-bus" + "\n" + "C: Steam engine locomotive" + "\n" + "D: Rent a motercycle", 2);
+
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", "Answers to question here", 6);
+        
+        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here","Answers to question here", 7);
+        
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here","Answers to question here", 8);
+        
+        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here","Answers to question here", 9);
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -125,15 +135,15 @@ public class Game extends Player {
                 break;
 
             case B:
-                // ADD CODE
+                answerB(command);
                 break;
 
             case C:
-                // ADD CODE
+                answerC(command);
                 break;
 
             case D:
-                // ADD CODE
+                answerD(command);
                 break;
 
             default:
@@ -187,14 +197,13 @@ public class Game extends Player {
     }
 
     private void talkTo(Command command) {
-        CommandWord commandWord = command.getCommandWord();
-        Scanner reader2 = new Scanner(System.in);
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
             if (currentRoom.doesRoomHasPerson() == true) {
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
+                System.out.println(currentRoom.getAnswers());
                 System.out.println("(Type A, B, C or D to answer)");
                 /*switch (commandWord) {
                     case A:
@@ -221,23 +230,60 @@ public class Game extends Player {
 
     }
 
-    private void answerA(Command command) {
-        if (currentRoom.getCorrectAnswer() == 2) {
-            System.out.println("You answered correct!");
-            Item solarPanelPart = new Item("Solar panel part");
-            System.out.println("A part has been added to your inventory");
-            inventory.add(solarPanelPart);
-        } else {
-            System.out.println("Wrong answer");
-        }
-    }
-
     private void viewInventory(Command command) {
         if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {
             System.out.println(getInventory().toString());
         } else {
             System.out.println("What you wanna view?  (Hint: Your inventory)");
 
+        }
     }
-}
+
+    private void answerA(Command command) {
+        if (currentRoom.getCorrectAnswer() == 1 && !command.hasSecondWord()) {
+            System.out.println("You answered correct!");
+            Item solarPanelPart = new Item("Solar panel part");
+            System.out.println("A part has been added to your inventory");
+            inventory.add(solarPanelPart);
+            currentRoom.setRoomHasPerson(false);
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
+
+    private void answerB(Command command) {
+        if (currentRoom.getCorrectAnswer() == 2 && !command.hasSecondWord()) {
+            System.out.println("You answered correct!");
+            Item solarPanelPart = new Item("Solar panel part");
+            System.out.println("A part has been added to your inventory");
+            inventory.add(solarPanelPart);
+            currentRoom.setRoomHasPerson(false);
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
+
+    private void answerC(Command command) {
+        if (currentRoom.getCorrectAnswer() == 3 && !command.hasSecondWord()) {
+            System.out.println("You answered correct!");
+            Item solarPanelPart = new Item("Solar panel part");
+            System.out.println("A part has been added to your inventory");
+            inventory.add(solarPanelPart);
+            currentRoom.setRoomHasPerson(false);
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
+
+    private void answerD(Command command) {
+        if (currentRoom.getCorrectAnswer() == 4 && !command.hasSecondWord()) {
+            System.out.println("You answered correct!");
+            Item solarPanelPart = new Item("Solar panel part");
+            System.out.println("A part has been added to your inventory");
+            inventory.add(solarPanelPart);
+            currentRoom.setRoomHasPerson(false);
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
 }
