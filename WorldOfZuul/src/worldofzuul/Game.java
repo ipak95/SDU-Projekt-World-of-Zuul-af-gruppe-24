@@ -222,10 +222,11 @@ public class Game extends Player {
     }
 
     private void answerA(Command command) {
-        if (currentRoom.getCorrectAnswer() == 1) {
+        if (currentRoom.getCorrectAnswer() == 2) {
             System.out.println("You answered correct!");
             Item solarPanelPart = new Item("Solar panel part");
-            System.out.println("A part has been added to your inventory" + inventory.add(solarPanelPart));
+            System.out.println("A part has been added to your inventory");
+            inventory.add(solarPanelPart);
         } else {
             System.out.println("Wrong answer");
         }
