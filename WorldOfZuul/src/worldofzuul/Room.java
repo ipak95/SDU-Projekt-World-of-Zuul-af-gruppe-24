@@ -10,26 +10,23 @@ public class Room
     private String description;
     private String longDescription;
     private String question;
-    private String answers;
+    private final int correctAnswer;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
     
 
-    public Room(String description, boolean hasPerson, String longDescription, String question) 
+    public Room(String description, boolean hasPerson, String longDescription, String question, int correctAnswer) 
     {
         this.description = description;
         this.longDescription = longDescription;
         exits = new HashMap<String, Room>();
         this.roomHasPerson = hasPerson;
         this.question = question;
+        this.correctAnswer = correctAnswer;
     }
 
-    public String getAnswers() {
-        return answers;
-    }
-
-    public void setAnswers(String answers) {
-        this.answers = answers;
+    public int getCorrectAnswer() {
+        return correctAnswer;
     }
 
     public String getQuestion() {

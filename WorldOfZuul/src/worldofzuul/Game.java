@@ -1,7 +1,8 @@
 package worldofzuul;
 
-
+import java.util.Scanner;
 import static worldofzuul.CommandWord.HELP;
+
 public class Game {
 
     private Parser parser;
@@ -14,25 +15,25 @@ public class Game {
 
     private void createRooms() {
         Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
-// If room value is false, then there is no need to add a String for the last argument
+// If room value is false, then there is no need to add a String for the second last arguemnt.
 
         home = new Room("In your home, where it's all calm and safe", false,
                 "It is your room. The radio is on with your favorite song. The light from your lightbulb is shining bright" + "\n"
                 + ", almost blinding you. The coffee is almost done and you sit and turns on the tv. This is when you" + "\n"
                 + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
                 + " fuels to power all of these eletronics. Lets go downtown and find out!",
-                "");
+                "", 0);
 
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "Insert Long Desprition here", 
-                "What alternative fuelsource could provide eletricity to this town, instead of using fossilfuels?" );
+        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "Insert Long Desprition here",
+                "What alternative fuelsource could provide eletricity to this town, instead of using fossilfuels?", 2);
 
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "");
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here");
-        station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please", "");
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here");
-        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here");
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here");
-        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here");
+        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "", 3);
+        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", 4);
+        station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please", "", 2);
+        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", 6);
+        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", 7);
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", 8);
+        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here", 9);
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -116,9 +117,8 @@ public class Game {
             case TALK:
                 talkTo(command);
                 break;
-
             case A:
-                // ADD CODE
+                answerA(command);
                 break;
 
             case B:
@@ -184,13 +184,33 @@ public class Game {
     }
 
     private void talkTo(Command command) {
+        CommandWord commandWord = command.getCommandWord();
+        Scanner reader2 = new Scanner(System.in);
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
             if (currentRoom.doesRoomHasPerson() == true) {
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
-                System.out.println(currentRoom.getAnswers());
+                System.out.println("(Type A, B, C or D to answer)");
+                /*switch (commandWord) {
+                    case A:
+                        answerA(command);
+                        break;
+
+                    case B:
+                        // ADD CODE
+                        break;
+
+                    case C:
+                        // ADD CODE
+                        break;
+
+                    case D:
+                        // ADD CODE
+                        break;
+                }*/
+
             } else {
                 System.out.println("There's no one to talk to");
             }
@@ -198,5 +218,12 @@ public class Game {
 
     }
 
-    
+    private void answerA(Command command) {
+        if (currentRoom.getCorrectAnswer() == 2) {
+            System.out.println("You answered correct!");
+        } else {
+            System.out.println("Wrong answer");
+        }
+    }
+
 }
