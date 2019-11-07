@@ -3,7 +3,7 @@ package worldofzuul;
 import java.util.Scanner;
 import static worldofzuul.CommandWord.HELP;
 
-public class Game {
+public class Game extends Player {
 
     private Parser parser;
     private Room currentRoom;
@@ -113,6 +113,9 @@ public class Game {
             case GRAB:
                 // ADD CODE
                 break;
+            case VIEW:
+                viewInventory(command);
+                break;
 
             case TALK:
                 talkTo(command);
@@ -219,11 +222,21 @@ public class Game {
     }
 
     private void answerA(Command command) {
-        if (currentRoom.getCorrectAnswer() == 2) {
+        if (currentRoom.getCorrectAnswer() == 1) {
             System.out.println("You answered correct!");
+            Item solarPanelPart = new Item("Solar panel part");
+            System.out.println("A part has been added to your inventory" + inventory.add(solarPanelPart));
         } else {
             System.out.println("Wrong answer");
         }
     }
 
+    private void viewInventory(Command command) {
+        if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {
+            System.out.println(getInventory().toString());
+        } else {
+            System.out.println("What you wanna view?  (Hint: Your inventory)");
+
+    }
+}
 }
