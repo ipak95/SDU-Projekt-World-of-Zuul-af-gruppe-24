@@ -3,7 +3,7 @@ package worldofzuul;
 public enum CommandWord {
 
     GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?"),
-    GRAB("grab"), TALK("talk"), LOOK("look"),
+    GRAB("grab"), TALK("talk"), LOOK("look"), VIEW("view"),
     A("a"), B("b"),
     C("c"), D("d");
 
