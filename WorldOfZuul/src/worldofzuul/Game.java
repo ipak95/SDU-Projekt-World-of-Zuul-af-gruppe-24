@@ -7,6 +7,7 @@ public class Game extends Player {
 
     private Parser parser;
     private Room currentRoom;
+    private boolean talk;
 
     public Game() {
         createRooms();
@@ -29,7 +30,7 @@ public class Game extends Player {
                 "A: Solar panels" + "\n" + "B: Just use more fossilefuel" + "\n" + "C: Windmills" + "\n" + "D: Nuclear powerplants ", 1);
 
         beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "", "", 3);
-        
+
         harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", "Answers to question here", 4);
 
         station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please",
@@ -38,12 +39,12 @@ public class Game extends Player {
                 "A: Taxe" + "\n" + "B: El-bus" + "\n" + "C: Steam engine locomotive" + "\n" + "D: Rent a motercycle", 2);
 
         park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", "Answers to question here", 6);
-        
-        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here","Answers to question here", 7);
-        
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here","Answers to question here", 8);
-        
-        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here","Answers to question here", 9);
+
+        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", "Answers to question here", 7);
+
+        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", "Answers to question here", 8);
+
+        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here", "Answers to question here", 9);
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -131,19 +132,27 @@ public class Game extends Player {
                 talkTo(command);
                 break;
             case A:
-                answerA(command);
+                if (currentRoom.isTalk() == true) {
+                    answerA(command);
+                }
                 break;
 
             case B:
+                if (currentRoom.isTalk() == true) {
                 answerB(command);
+                }
                 break;
 
             case C:
+                if (currentRoom.isTalk() == true) {
                 answerC(command);
+                }
                 break;
 
             case D:
+                if (currentRoom.isTalk() == true) {
                 answerD(command);
+                }
                 break;
 
             default:
@@ -201,28 +210,11 @@ public class Game extends Player {
             System.out.println("What are you trying to do?   (Hint: Talk)");
         } else {
             if (currentRoom.doesRoomHasPerson() == true) {
+                currentRoom.setTalk(true); 
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
                 System.out.println(currentRoom.getAnswers());
                 System.out.println("(Type A, B, C or D to answer)");
-                /*switch (commandWord) {
-                    case A:
-                        answerA(command);
-                        break;
-
-                    case B:
-                        // ADD CODE
-                        break;
-
-                    case C:
-                        // ADD CODE
-                        break;
-
-                    case D:
-                        // ADD CODE
-                        break;
-                }*/
-
             } else {
                 System.out.println("There's no one to talk to");
             }
@@ -246,6 +238,7 @@ public class Game extends Player {
             System.out.println("A part has been added to your inventory");
             inventory.add(solarPanelPart);
             currentRoom.setRoomHasPerson(false);
+            currentRoom.setTalk(false);
         } else {
             System.out.println("Wrong answer");
         }
@@ -258,6 +251,7 @@ public class Game extends Player {
             System.out.println("A part has been added to your inventory");
             inventory.add(solarPanelPart);
             currentRoom.setRoomHasPerson(false);
+            currentRoom.setTalk(false);
         } else {
             System.out.println("Wrong answer");
         }
@@ -270,6 +264,7 @@ public class Game extends Player {
             System.out.println("A part has been added to your inventory");
             inventory.add(solarPanelPart);
             currentRoom.setRoomHasPerson(false);
+            currentRoom.setTalk(false);
         } else {
             System.out.println("Wrong answer");
         }
@@ -282,8 +277,10 @@ public class Game extends Player {
             System.out.println("A part has been added to your inventory");
             inventory.add(solarPanelPart);
             currentRoom.setRoomHasPerson(false);
+            currentRoom.setTalk(false);
         } else {
             System.out.println("Wrong answer");
         }
     }
+    
 }
