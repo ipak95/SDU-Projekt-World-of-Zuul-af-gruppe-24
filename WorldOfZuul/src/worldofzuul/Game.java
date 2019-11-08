@@ -228,7 +228,7 @@ public class Game {
             System.out.println();
         } else {
             if (currentRoom.doesRoomHasPerson()) {
-                currentRoom.setTalk(true); 
+                currentRoom.setTalk(true);
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
                 System.out.println(currentRoom.getAnswers());
@@ -253,13 +253,23 @@ public class Game {
     // this command checks if the answer given by the player is equal to the String value from correctAnswer
     private void answer(Command command) {
         // If answer "this letter" is the same as the argument correctAnswer value
-        if (command.hasSecondWord() && command.getSecondWord().equals(currentRoom.getCorrectAnswer())) {
+        // This makes it so the player can only type an answer if the "talkTo" methode has been used in the room
+        if (currentRoom.isTalk() == true && command.hasSecondWord() && command.getSecondWord().equals(currentRoom.getCorrectAnswer())) {
             System.out.println("You answered correct!");
             System.out.println("A part has been added to your inventory");
             System.out.println();
             player.addItem(items.get(currentRoom.getName()));
             currentRoom.setRoomHasPerson(false);
             currentRoom.setTalk(false);
+            //Checks for a person in the room. No reason in printing wrong/correct answer if no person exist in room
+        } else if (currentRoom.doesRoomHasPerson() == false) {
+            System.out.println("No question's or answer's in here");
+            System.out.println();
+            // Hinting the player about talking to the person before answering the question or typing in the answer
+        } else if (currentRoom.isTalk() == false && command.hasSecondWord()) {
+            System.out.println("You can't answer anything yet..");
+            System.out.println("(Hint: Try and talk to a person first)");
+            System.out.println();
         } else {
             System.out.println("Wrong answer. Try again!");
             System.out.println();
