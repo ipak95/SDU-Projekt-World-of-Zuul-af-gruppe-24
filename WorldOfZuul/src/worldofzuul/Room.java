@@ -14,6 +14,7 @@ public class Room
     private final int correctAnswer;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
+    private boolean talk = false;
     
 
     public Room(String description, boolean hasPerson, String longDescription, String question, String answers, int correctAnswer) 
@@ -38,6 +39,14 @@ public class Room
 
     public String getQuestion() {
         return question;
+    }
+
+    public void setTalk(boolean talk) {
+        this.talk = talk;
+    }
+
+    public boolean isTalk() {
+        return talk;
     }
     
 
