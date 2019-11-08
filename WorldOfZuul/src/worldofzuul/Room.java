@@ -7,18 +7,20 @@ import java.util.Iterator;
 
 public class Room 
 {
+    private String name;
     private String description;
     private String longDescription;
     private String question;
     private final String answers;
-    private final int correctAnswer;
+    private final String correctAnswer;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
     private boolean talk = false;
     
 
-    public Room(String description, boolean hasPerson, String longDescription, String question, String answers, int correctAnswer) 
+    public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, String correctAnswer)
     {
+        this.name = name;
         this.description = description;
         this.longDescription = longDescription;
         exits = new HashMap<String, Room>();
@@ -28,12 +30,15 @@ public class Room
         this.answers = answers;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getAnswers() {
         return answers;
     }
-    
 
-    public int getCorrectAnswer() {
+    public String getCorrectAnswer() {
         return correctAnswer;
     }
 
@@ -52,7 +57,7 @@ public class Room
 
     public boolean doesRoomHasPerson() {
         return roomHasPerson;
-         //True = Yes / False = No
+        //True = Yes / False = No
     }
     
 

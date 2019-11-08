@@ -1,50 +1,57 @@
 package worldofzuul;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import static worldofzuul.CommandWord.HELP;
 
-public class Game extends Player {
+public class Game {
 
+    private Player player;
     private Parser parser;
     private Room currentRoom;
     private boolean talk;
+    private ArrayList<Room> rooms = new ArrayList<>();
+    private HashMap<String, Item> items = new HashMap<>();
 
     public Game() {
         createRooms();
         parser = new Parser();
+        player = new Player();
+        createItems();
     }
 
     private void createRooms() {
         Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
-// If room value is false, then there is no need to add a String for the second last arguemnt.
 
-        home = new Room("In your home, where it's all calm and safe", false,
-                "It is your room. The radio is on with your favorite song. The light from your lightbulb is shining bright" + "\n"
+        home = new Room("home", "In your home, where it's all calm and safe", false,
+                "It is your room. The radio is on with your favorite song. The light from your light bulb is shining bright" + "\n"
                 + ", almost blinding you. The coffee is almost done and you sit and turns on the tv. This is when you" + "\n"
-                + "realize that all these eletrocnics are using electricity. Maybe there is a better source than fossil" + "\n"
-                + " fuels to power all of these eletronics. Lets go downtown and find out!",
-                "", "", 0);
+                + "realize that all these electronics are using electricity. Maybe there is a better source than fossil" + "\n"
+                + " fuels to power all of these electronics. Lets go downtown and find out!",
+                "", "", "");
 
-        downtown = new Room("Downtown, with lots of people, trafic and noise. Not a calm at all", true, "Insert Long Desprition here",
-                "What alternative fuelsource could provide eletricity to this town, instead of using fossilfuels?",
-                "A: Solar panels" + "\n" + "B: Just use more fossilefuel" + "\n" + "C: Windmills" + "\n" + "D: Nuclear powerplants ", 1);
+        downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm at all", true, "Insert Long Description here",
+                "What alternative fuel source could help provide electricity to this town, instead of using fossil fuels?",
+                "A: Solar panels" + "\n" + "B: Just use more coal" + "\n" + "C: --INSERT OPTION C--" + "\n" + "D: --INSERT OPTION D--", "a");
 
-        beach = new Room("At the beach, where the calming sound of the waves embraces you", false, "", "", "", 3);
+        beach = new Room("beach", "At the beach, where the calming sound of the waves embraces you", false, "", "", "", "");
 
-        harbour = new Room("At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", "Answers to question here", 4);
+        harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", "Answers to question here", "");
 
-        station = new Room("At the station, where it's just as noisy as downtown", true, "insert long description please",
+        station = new Room("station", "At the station, where it's just as noisy as downtown", true, "insert long description please",
                 "Hello sir, what type of transportation method would you like to use today?" + "\n"
                 + " If you choose our most environmentally friendly choice, I'll give you a reward!",
-                "A: Taxe" + "\n" + "B: El-bus" + "\n" + "C: Steam engine locomotive" + "\n" + "D: Rent a motercycle", 2);
+                "A: Taxe" + "\n" + "B: El-bus" + "\n" + "C: Steam engine locomotive" + "\n" + "D: Rent a motercycle", "b");
 
-        park = new Room("In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", "Answers to question here", 6);
+        park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", "Answers to question here", "");
 
-        mall = new Room("At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", "Answers to question here", 7);
+        mall = new Room("mall", "At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", "Answers to question here", "");
 
-        rooftop = new Room("On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", "Answers to question here", 8);
+        rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", "Answers to question here", "");
 
-        university = new Room("In the university, where knowledge is aquired or used", true, "insert long description please", "question here", "Answers to question here", 9);
+        university = new Room("university", "In the university, where knowledge is acquired and used", true, "insert long description please", "question here", "Answers to question here", "d");
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -73,6 +80,29 @@ public class Game extends Player {
         university.setExit("east", mall);
 
         currentRoom = home;
+
+        // adding rooms to ArrayList rooms
+        rooms.add(home);
+        rooms.add(downtown);
+        rooms.add(beach);
+        rooms.add(harbour);
+        rooms.add(station);
+        rooms.add(park);
+        rooms.add(mall);
+        rooms.add(rooftop);
+        rooms.add(university);
+    }
+
+    public void createItems() {
+        Item part1, part2, part3;
+
+        part1 = new Item("Part 1");
+        part2 = new Item("Part 2");
+        part3 = new Item("Part 3");
+
+        items.put("downtown", part1);
+        items.put("station", part2);
+        items.put("university", part3);
     }
 
     public void play() {
@@ -131,32 +161,14 @@ public class Game extends Player {
             case TALK:
                 talkTo(command);
                 break;
-            case A:
-                if (currentRoom.isTalk() == true) {
-                    answerA(command);
-                }
-                break;
 
-            case B:
-                if (currentRoom.isTalk() == true) {
-                answerB(command);
-                }
-                break;
-
-            case C:
-                if (currentRoom.isTalk() == true) {
-                answerC(command);
-                }
-                break;
-
-            case D:
-                if (currentRoom.isTalk() == true) {
-                answerD(command);
-                }
+            case ANSWER:
+                answer(command);
                 break;
 
             default:
                 System.out.println("I don't know what you mean...");
+                System.out.println();
         }
 
         return wantToQuit;
@@ -173,6 +185,7 @@ public class Game extends Player {
     private void goRoom(Command command) {
         if (!command.hasSecondWord()) {
             System.out.println("Go where?");
+            System.out.println();
             return;
         }
 
@@ -182,8 +195,10 @@ public class Game extends Player {
 
         if (nextRoom == null) {
             System.out.println("There is no door!");
+            System.out.println();
         } else {
             currentRoom = nextRoom;
+            System.out.println();
             System.out.println(currentRoom.getShortDescription());
         }
     }
@@ -191,6 +206,7 @@ public class Game extends Player {
     private boolean quit(Command command) {
         if (command.hasSecondWord()) {
             System.out.println("Quit what?");
+            System.out.println();
             return false;
         } else {
             return true;
@@ -202,85 +218,51 @@ public class Game extends Player {
             System.out.println(currentRoom.getLongDescription());
         } else {
             System.out.println("Look where?  (Hint: around)");
+            System.out.println();
         }
     }
 
     private void talkTo(Command command) {
         if (command.hasSecondWord()) {
             System.out.println("What are you trying to do?   (Hint: Talk)");
+            System.out.println();
         } else {
-            if (currentRoom.doesRoomHasPerson() == true) {
+            if (currentRoom.doesRoomHasPerson()) {
                 currentRoom.setTalk(true); 
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
                 System.out.println(currentRoom.getAnswers());
-                System.out.println("(Type A, B, C or D to answer)");
+                System.out.println("(Type answer a, answer b, answer c or answer d to answer)");
+                System.out.println();
             } else {
                 System.out.println("There's no one to talk to");
+                System.out.println();
             }
         }
-
     }
 
     private void viewInventory(Command command) {
         if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {
-            System.out.println(getInventory().toString());
+            player.displayInventory();
         } else {
             System.out.println("What you wanna view?  (Hint: Your inventory)");
-
+            System.out.println();
         }
     }
 
-    private void answerA(Command command) {
-        if (currentRoom.getCorrectAnswer() == 1 && !command.hasSecondWord()) {
+    // this command checks if the answer given by the player is equal to the String value from correctAnswer
+    private void answer(Command command) {
+        // If answer "this letter" is the same as the argument correctAnswer value
+        if (command.hasSecondWord() && command.getSecondWord().equals(currentRoom.getCorrectAnswer())) {
             System.out.println("You answered correct!");
-            Item solarPanelPart = new Item("Solar panel part");
             System.out.println("A part has been added to your inventory");
-            inventory.add(solarPanelPart);
+            System.out.println();
+            player.addItem(items.get(currentRoom.getName()));
             currentRoom.setRoomHasPerson(false);
             currentRoom.setTalk(false);
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer. Try again!");
+            System.out.println();
         }
     }
-
-    private void answerB(Command command) {
-        if (currentRoom.getCorrectAnswer() == 2 && !command.hasSecondWord()) {
-            System.out.println("You answered correct!");
-            Item solarPanelPart = new Item("Solar panel part");
-            System.out.println("A part has been added to your inventory");
-            inventory.add(solarPanelPart);
-            currentRoom.setRoomHasPerson(false);
-            currentRoom.setTalk(false);
-        } else {
-            System.out.println("Wrong answer");
-        }
-    }
-
-    private void answerC(Command command) {
-        if (currentRoom.getCorrectAnswer() == 3 && !command.hasSecondWord()) {
-            System.out.println("You answered correct!");
-            Item solarPanelPart = new Item("Solar panel part");
-            System.out.println("A part has been added to your inventory");
-            inventory.add(solarPanelPart);
-            currentRoom.setRoomHasPerson(false);
-            currentRoom.setTalk(false);
-        } else {
-            System.out.println("Wrong answer");
-        }
-    }
-
-    private void answerD(Command command) {
-        if (currentRoom.getCorrectAnswer() == 4 && !command.hasSecondWord()) {
-            System.out.println("You answered correct!");
-            Item solarPanelPart = new Item("Solar panel part");
-            System.out.println("A part has been added to your inventory");
-            inventory.add(solarPanelPart);
-            currentRoom.setRoomHasPerson(false);
-            currentRoom.setTalk(false);
-        } else {
-            System.out.println("Wrong answer");
-        }
-    }
-    
 }
