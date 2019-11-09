@@ -96,9 +96,9 @@ public class Game {
     public void createItems() {
         Item part1, part2, part3;
 
-        part1 = new Item("Part 1");
-        part2 = new Item("Part 2");
-        part3 = new Item("Part 3");
+        part1 = new Item("Name of first part 1");
+        part2 = new Item("Name of first part 2");
+        part3 = new Item("Name of first part 3");
 
         items.put("downtown", part1);
         items.put("station", part2);
@@ -253,7 +253,7 @@ public class Game {
     // this command checks if the answer given by the player is equal to the String value from correctAnswer
     private void answer(Command command) {
         // If answer "this letter" is the same as the argument correctAnswer value
-        // This makes it so the player can only type an answer if the "talkTo" methode has been used in the room
+        // This makes it so the player can only type an answer if the "talkTo" method has been used in the room
         if (currentRoom.isTalk() == true && command.hasSecondWord() && command.getSecondWord().equals(currentRoom.getCorrectAnswer())) {
             System.out.println("You answered correct!");
             System.out.println("A part has been added to your inventory");

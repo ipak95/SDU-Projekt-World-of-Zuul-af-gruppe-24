@@ -22,7 +22,7 @@ public class Player {
         String returnString = "Inventory: ";
 
         for (Item item : inventory) {
-            returnString += item.getName();
+            returnString += item.getName() + " | ";
         }
 
         System.out.print(returnString);
