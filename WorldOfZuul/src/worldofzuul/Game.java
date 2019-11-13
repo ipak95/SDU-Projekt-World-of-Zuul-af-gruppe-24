@@ -7,7 +7,8 @@ import java.util.Scanner;
 import static worldofzuul.CommandWord.HELP;
 
 public class Game {
-//hej
+
+    private boolean wantToQuit = false;
     private Player player;
     private Parser parser;
     private Room currentRoom;
@@ -131,7 +132,6 @@ public class Game {
     }
 
     private boolean processCommand(Command command) {
-        boolean wantToQuit = false;
 
         CommandWord commandWord = command.getCommandWord();
 
@@ -165,13 +165,16 @@ public class Game {
             case ANSWER:
                 answer(command);
                 break;
+            case BUILD:
+                buildToWin(command);
+                break;
 
             default:
                 System.out.println("I don't know what you mean...");
                 System.out.println();
         }
 
-        return wantToQuit;
+        return this.wantToQuit;
     }
 
     private void printHelp() {
@@ -274,5 +277,25 @@ public class Game {
             System.out.println("Wrong answer. Try again!");
             System.out.println();
         }
+    }
+
+    public boolean buildToWin(Command command) {
+        if (command.hasSecondWord()) {
+            System.out.println("What are trying to do?  (Hint: build) ");
+        } else if (!currentRoom.getName().equals("university")) {
+            System.out.println("You should probably do this in the University instead of here");
+        } else if (currentRoom.getName().equals("university") && player.getInventory().size() < 6) {
+            System.out.println("You need more parts to complete this game");
+        } else if (currentRoom.getName().equals("university") && player.getInventory().size() >= 6) {
+            System.out.println("Congratulations, you have won the game! You gathered all the solar panel pieces"
+                    + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
+                    + "\n"
+                    + "Use the knowledge wisely and make a change where you can!"
+                    + " (Prees any button to quit)");
+            Scanner sc = new Scanner(System.in);
+            sc.nextLine();
+            return wantToQuit = true;
+        }
+        return false;
     }
 }
