@@ -216,6 +216,7 @@ public class Game {
     private void lookAround(Command command) {
         if (command.hasSecondWord() && command.getSecondWord().equals("around")) {
             System.out.println(currentRoom.getLongDescription());
+            currentRoom.setTalk(true);
         } else {
             System.out.println("Look where?  (Hint: around)");
             System.out.println();
@@ -227,8 +228,7 @@ public class Game {
             System.out.println("What are you trying to do?   (Hint: Talk)");
             System.out.println();
         } else {
-            if (currentRoom.doesRoomHasPerson()) {
-                currentRoom.setTalk(true);
+            if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
                 System.out.println(currentRoom.getQuestion());
                 System.out.println("");
                 System.out.println(currentRoom.getAnswers());
