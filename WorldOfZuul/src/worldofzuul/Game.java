@@ -42,7 +42,7 @@ public class Game {
                 "A: Why are you talking to me?" + "\n" +
                         "B: You think? I’m not sure actually" + "\n" +
                         "C: Yes! We could use something like solar panels" + "\n" +
-                        "D: It’s not possible-", "c");
+                        "D: It’s not possible", "c");
 
         beach = new Room("beach", "At the beach, where the calming sound of the waves embraces you", false,
                 "You walk along the beach, sniffs in the fresh air. You are almost alone, only some seagulls" + "\n"
@@ -81,19 +81,19 @@ public class Game {
                         "the peace is disturbed by a group of activists that seem to be angry about something! Maybe you should" + "\n" +
                         "go check it out / look around to see if they have anything useful to say?",
                 "Activist asks with an angry voice: Do you know what the cleanest form for energy is",
-                "A: Wind, water and sun " + "\n" + "B: Coal-fired power station" + "\n" +
+                "A: Solar power station " + "\n" + "B: Coal-fired power station" + "\n" +
                         "C: Fuel power station" + "\n" + "D: Nuclear power station", "a");
 
         mall = new Room("mall", "At the mall, a good place to spend your hard earned money", true,
                 "In your quest to find the remaining pieces for your solar panel you find yourself at the mall. Next" + "\n" +
                         "to the food stalls you see two men advertising clean and sustainable energy. They might have the missing" + "\n" +
-                        "pieces in stock (hint talk).",
+                        "pieces in stock.",
                 "Sellers: Hello good sir! The good people from SolarGale want to make your life cleaner and" + "\n" +
                         "better! Therefor we are giving away parts for a solar panel to all that can answer our very " + "\n" +
                         "important question about clean energy. Why use solar panels?",
-                "A: Because you can make money" + "\n" + "B: Because it increases global warming" + "\n" +
-                        "C: Because it with help reducing CO2 emission and you can make money of it" + "\n" + "D: It will look good on your house",
-                "c");
+                "A: Because it with help reducing CO2 emission and you can make money of it" + "\n" + "B: Because it increases global warming" + "\n" +
+                        "C: Because you can make money" + "\n" + "D: It will look good on your house",
+                "a");
 
         rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", true,
                 "You find yourself on the roof of the mall. You see a man with a glass container in his hand. On" + "\n" +
@@ -102,8 +102,8 @@ public class Game {
                 "Buddy, I’m not buying this speech about your solar crap! Give me a good reason why I should invest in" + "\n" +
                         "a solar solution.",
                 "A: It’s a smarter choice" + "\n" + "B: Save the children!" + "\n" +
-                        "C: Save thousands of dollars and increase property value" + "\n" + "D: Because, you know, just do it!",
-                "c");
+                        "C: Because, you know, just do it!" + "\n" + "D: Save thousands of dollars and increase property value",
+                "d");
 
         university = new Room("university", "In the university, where knowledge is acquired and used", true,
                 "You enter the university. People are sitting at tables, studying and talking. A lector is working on" + "\n" +
