@@ -54,30 +54,30 @@ public class Game {
         university = new Room("university", "In the university, where knowledge is acquired and used", true, "insert long description please", "question here", "Answers to question here", "d");
 
         //"Mapping out" all the rooms and how the are connected (setExit)
-        home.setExit("north", downtown);
+        home.setExit("downtown", downtown);
 
-        downtown.setExit("west", beach);
-        downtown.setExit("east", harbour);
-        downtown.setExit("north", park);
-        downtown.setExit("south", home);
+        downtown.setExit("beach", beach);
+        downtown.setExit("harbour", harbour);
+        downtown.setExit("park", park);
+        downtown.setExit("home", home);
 
-        beach.setExit("east", downtown);
+        beach.setExit("downtown", downtown);
 
-        harbour.setExit("north", station);
-        harbour.setExit("west", downtown);
+        harbour.setExit("station", station);
+        harbour.setExit("downtown", downtown);
 
-        station.setExit("south", harbour);
+        station.setExit("harbour", harbour);
 
-        park.setExit("south", downtown);
-        park.setExit("north", mall);
+        park.setExit("downtown", downtown);
+        park.setExit("mall", mall);
 
-        mall.setExit("south", park);
-        mall.setExit("north", rooftop);
-        mall.setExit("west", university);
+        mall.setExit("park", park);
+        mall.setExit("rooftop", rooftop);
+        mall.setExit("university", university);
 
-        rooftop.setExit("south", mall);
+        rooftop.setExit("mall", mall);
 
-        university.setExit("east", mall);
+        university.setExit("mall", mall);
 
         currentRoom = home;
 
