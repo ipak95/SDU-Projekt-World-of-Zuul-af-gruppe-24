@@ -151,9 +151,7 @@ public class Game {
             case LOOK:
                 lookAround(command);
                 break;
-            case GRAB:
-                // ADD CODE
-                break;
+
             case VIEW:
                 viewInventory(command);
                 break;
