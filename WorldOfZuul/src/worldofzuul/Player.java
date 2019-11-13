@@ -19,7 +19,7 @@ public class Player {
 
     // Returns items in inventory when used
     public void displayInventory() {
-        String returnString = "Inventory: ";
+        String returnString = "Inventory: |";
 
         for (Item item : inventory) {
             returnString += item.getName() + " | ";
