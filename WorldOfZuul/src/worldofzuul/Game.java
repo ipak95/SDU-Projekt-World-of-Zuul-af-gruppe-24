@@ -26,32 +26,88 @@ public class Game {
         Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
 
         home = new Room("home", "In your home, where it's all calm and safe", false,
-                "It is your room. The radio is on with your favorite song. The light from your light bulb is shining bright" + "\n"
-                + ", almost blinding you. The coffee is almost done and you sit and turns on the tv. This is when you" + "\n"
-                + "realize that all these electronics are using electricity. Maybe there is a better source than fossil" + "\n"
-                + " fuels to power all of these electronics. Lets go downtown and find out!",
+                "It is your room. The radio is on with your favourite song. The light from your lightbulb is shining" + "\n" +
+                        "bright, almost blinding you. The coffee is almost done, and you sit down in your recliner. You" + "\n" +
+                        "turn on the tv and this is when you realise that all these electronics are using electricity. Maybe" + "\n" +
+                        "there is a better source than fossil fuels to power all of it. Let’s go on an adventure to find out!",
                 "", "", "");
 
-        downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm at all", true, "Insert Long Description here",
-                "What alternative fuel source could help provide electricity to this town, instead of using fossil fuels?",
-                "A: Solar panels" + "\n" + "B: Just use more coal" + "\n" + "C: --INSERT OPTION C--" + "\n" + "D: --INSERT OPTION D--", "a");
+        downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm at all", true,
+                "You look around. You see a lot of burning light, even though it’s not dark. You wonder why all" + "\n" +
+                        "the stores keep their light turned on when it’s not needed. A random person approaches you;" + "\n" +
+                        "he’s willing to talk.",
+                "Maybe we can’t control when the stores have their lights turned on, but maybe we can change how they" + "\n" +
+                        "get the electricity needed? Don’t you think?",
+                "A: Why are you talking to me?" + "\n" +
+                        "B: You think? I’m not sure actually" + "\n" +
+                        "C: Yes! We could use something like solar panels" + "\n" +
+                        "D: It’s not possible-", "c");
 
-        beach = new Room("beach", "At the beach, where the calming sound of the waves embraces you", false, "", "", "", "");
+        beach = new Room("beach", "At the beach, where the calming sound of the waves embraces you", false,
+                "You walk along the beach, sniffs in the fresh air. You are almost alone, only some seagulls" + "\n"
+                        + "screams in the distance. You suddenly spot a bottle with what seems to be a note inside. It" + "\n"
+                        + "could be fun to see what is says.",
+                "", "", "");
 
-        harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", false, "insert long description please", "question here", "Answers to question here", "");
+        harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", false,
+                "You see plenty of old people. Relaxing at the pier, just admiring the beautiful ships. There are a" + "\n" +
+                        "few youngsters who skate. You then decide to sit beside an older gentleman who seems grumpy. As he" + "\n" +
+                        "starts to talk, you listen. He tells you he is having a hard time adjusting to the new technologies" + "\n" +
+                        "because they just installed solar panels on his ship to be more environmentally friendly. Apparently" + "\n" +
+                        "when you use coal, you pollute the air around the globe and ships are responsible for around 18% of" + "\n" +
+                        "air pollution around the world. He does not believe it and want to use more coal, because why change" + "\n" +
+                        "something you know works. Maybe you can change his mind about solar panels?",
+                "How will you change his mind about solar panels?",
+                "A: Make him understand your points through harsh words" + "\n" +
+                        "B: You can’t teach an old dog new tricks. Just leave and let him be grumpy." + "\n" +
+                        "C: Talk about how you can reduce the pollution to a minimum by using solar panels and by that helping save the planet" + "\n" +
+                        "D: Do a flip", "c");
 
-        station = new Room("station", "At the station, where it's just as noisy as downtown", true, "insert long description please",
-                "Hello sir, what type of transportation method would you like to use today?" + "\n"
-                + " If you choose our most environmentally friendly choice, I'll give you a reward!",
-                "A: Taxe" + "\n" + "B: El-bus" + "\n" + "C: Steam engine locomotive" + "\n" + "D: Rent a motercycle", "b");
+        station = new Room("station", "At the station, where it's just as noisy as downtown", true,
+                "You are at the station. People seem to be in a rush to get wherever they need to be. There is a" + "\n" +
+                        "vending machine, maybe you can grab a snack. Beside the vending machine is a poster for an " + "\n" +
+                        "upcoming movie: The Solarman! It seems like he is a superhero who uses solar energy to create" + "\n" +
+                        "a better environment inside towns, by installing solar panels on the rooftops. They could" + "\n" +
+                        "probably use that downtown." + "\n" +
+                        "As you look around you see a ticket seller being idle, just begging for customers. Maybe you" + "\n" +
+                        "should buy a ticket home for later?",
+                "Counter lady: Hello sir, what type of transportation method would you like to use today? If you" + "\n" +
+                        "choose our most environmentally friendly choice, I'll give you a reward!",
+                "A: A taxi" + "\n" + "B: An electric bus" + "\n" + "C: A steam locomotive" + "\n" + "D: Rent a scooter", "b");
 
-        park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", false, "insert long description please", "question here", "Answers to question here", "");
+        park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", false,
+                "You are standing in the middle of the park. The place seems to be quiet and peaceful. Suddenly" + "\n" +
+                        "the peace is disturbed by a group of activists that seem to be angry about something! Maybe you should" + "\n" +
+                        "go check it out / look around to see if they have anything useful to say?",
+                "Activist asks with an angry voice: Do you know what the cleanest form for energy is",
+                "A: Wind, water and sun " + "\n" + "B: Coal-fired power station" + "\n" +
+                        "C: Fuel power station" + "\n" + "D: Nuclear power station", "a");
 
-        mall = new Room("mall", "At the mall, a good place to spend your hard earned money", false, "insert long description please", "question here", "Answers to question here", "");
+        mall = new Room("mall", "At the mall, a good place to spend your hard earned money", false,
+                "In your quest to find the remaining pieces for your solar panel you find yourself at the mall. Next" + "\n" +
+                        "to the food stalls you see two men advertising clean and sustainable energy. They might have the missing" + "\n" +
+                        "pieces in stock (hint talk).",
+                "Sellers: Hello good sir! The good people from SolarGale want to make your life cleaner and" + "\n" +
+                        "better! Therefor we are giving away parts for a solar panel to all that can answer our very " + "\n" +
+                        "important question about clean energy. Why use solar panels?",
+                "A: Because you can make money" + "\n" + "B: Because it increases global warming" + "\n" +
+                        "C: Because it with help reducing CO2 emission and you can make money of it" + "\n" + "D: It will look good on your house",
+                "c");
 
-        rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", false, "insert long description please", "question here", "Answers to question here", "");
+        rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", false,
+                "You find yourself on the roof of the mall. You see a man with a glass container in his hand. On" + "\n" +
+                        "the container you notice a label saying, \"Fossil Fuel”. You might be able to convince him to use solar" + "\n" +
+                        "energy instead.",
+                "Buddy, I’m not buying this speech about your solar crap! Give me a good reason why I should invest in" + "\n" +
+                        "a solar solution.",
+                "A: It’s a smarter choice" + "\n" + "B: Save the children!" + "\n" +
+                        "C: Save thousands of dollars and increase property value" + "\n" + "D: Because, you know, just do it!",
+                "c");
 
-        university = new Room("university", "In the university, where knowledge is acquired and used", true, "insert long description please", "question here", "Answers to question here", "d");
+        university = new Room("university", "In the university, where knowledge is acquired and used", true,
+                "You enter the university. People are sitting at tables, studying and talking. A lector is working on" + "\n" +
+                        "some electronics inside a lab. He looks knowledgeable. Maybe he can help you with assembling the solar panel?",
+                "", "", "");
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("north", downtown);
@@ -94,15 +150,21 @@ public class Game {
     }
 
     public void createItems() {
-        Item part1, part2, part3;
+        Item part1, part2, part3, part4, part5, part6;
 
-        part1 = new Item("Name of first part 1");
-        part2 = new Item("Name of first part 2");
-        part3 = new Item("Name of first part 3");
+        part1 = new Item("wires");
+        part2 = new Item("glass panel");
+        part3 = new Item("crystalline cells");
+        part4 = new Item("battery");
+        part5 = new Item("frame");
+        part6 = new Item("junction box");
 
         items.put("downtown", part1);
-        items.put("station", part2);
-        items.put("university", part3);
+        items.put("harbour", part2);
+        items.put("station", part3);
+        items.put("park", part4);
+        items.put("mall", part5);
+        items.put("rooftop", part6);
     }
 
     public void play() {
