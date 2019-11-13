@@ -7,7 +7,7 @@ import java.util.Scanner;
 import static worldofzuul.CommandWord.HELP;
 
 public class Game {
-
+//hej
     private Player player;
     private Parser parser;
     private Room currentRoom;
