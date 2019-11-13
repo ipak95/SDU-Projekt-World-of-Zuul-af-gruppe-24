@@ -50,7 +50,7 @@ public class Game {
                         + "could be fun to see what is says.",
                 "", "", "");
 
-        harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", false,
+        harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", true,
                 "You see plenty of old people. Relaxing at the pier, just admiring the beautiful ships. There are a" + "\n" +
                         "few youngsters who skate. You then decide to sit beside an older gentleman who seems grumpy. As he" + "\n" +
                         "starts to talk, you listen. He tells you he is having a hard time adjusting to the new technologies" + "\n" +
@@ -76,7 +76,7 @@ public class Game {
                         "choose our most environmentally friendly choice, I'll give you a reward!",
                 "A: A taxi" + "\n" + "B: An electric bus" + "\n" + "C: A steam locomotive" + "\n" + "D: Rent a scooter", "b");
 
-        park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", false,
+        park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", true,
                 "You are standing in the middle of the park. The place seems to be quiet and peaceful. Suddenly" + "\n" +
                         "the peace is disturbed by a group of activists that seem to be angry about something! Maybe you should" + "\n" +
                         "go check it out / look around to see if they have anything useful to say?",
@@ -84,7 +84,7 @@ public class Game {
                 "A: Wind, water and sun " + "\n" + "B: Coal-fired power station" + "\n" +
                         "C: Fuel power station" + "\n" + "D: Nuclear power station", "a");
 
-        mall = new Room("mall", "At the mall, a good place to spend your hard earned money", false,
+        mall = new Room("mall", "At the mall, a good place to spend your hard earned money", true,
                 "In your quest to find the remaining pieces for your solar panel you find yourself at the mall. Next" + "\n" +
                         "to the food stalls you see two men advertising clean and sustainable energy. They might have the missing" + "\n" +
                         "pieces in stock (hint talk).",
@@ -95,7 +95,7 @@ public class Game {
                         "C: Because it with help reducing CO2 emission and you can make money of it" + "\n" + "D: It will look good on your house",
                 "c");
 
-        rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", false,
+        rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", true,
                 "You find yourself on the roof of the mall. You see a man with a glass container in his hand. On" + "\n" +
                         "the container you notice a label saying, \"Fossil Fuel”. You might be able to convince him to use solar" + "\n" +
                         "energy instead.",
