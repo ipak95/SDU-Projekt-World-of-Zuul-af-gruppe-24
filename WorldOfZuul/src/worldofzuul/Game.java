@@ -33,7 +33,7 @@ public class Game {
                         "there is a better source than fossil fuels to power all of it. Let’s go on an adventure to find out!",
                 "", "", "");
 
-        downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm at all", true,
+        downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm place at all", true,
                 "You look around. You see a lot of burning light, even though it’s not dark. You wonder why all" + "\n" +
                         "the stores keep their light turned on when it’s not needed. A random person approaches you;" + "\n" +
                         "he’s willing to talk.",
