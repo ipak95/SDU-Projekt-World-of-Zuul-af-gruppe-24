@@ -210,6 +210,7 @@ public class Game {
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+
             case LOOK:
                 lookAround(command);
                 break;
@@ -225,6 +226,7 @@ public class Game {
             case ANSWER:
                 answer(command);
                 break;
+
             case BUILD:
                 buildToWin(command);
                 break;
@@ -239,7 +241,7 @@ public class Game {
 
     private void printHelp() {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("around at the " + currentRoom.getName());
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
@@ -308,7 +310,7 @@ public class Game {
         if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {
             player.displayInventory();
         } else {
-            System.out.println("What you wanna view?  (Hint: Your inventory)");
+            System.out.println("What do you want to view?  (Hint: inventory)");
             System.out.println();
         }
     }
@@ -351,7 +353,7 @@ public class Game {
                     + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
                     + "\n"
                     + "Use the knowledge wisely and make a change where you can!"
-                    + " (Prees any button to quit)");
+                    + " (Press any button to quit)");
             Scanner sc = new Scanner(System.in);
             sc.nextLine();
             return wantToQuit = true;
