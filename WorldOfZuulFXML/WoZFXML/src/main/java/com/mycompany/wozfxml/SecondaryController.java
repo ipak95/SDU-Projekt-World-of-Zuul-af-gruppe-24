@@ -1,4 +1,4 @@
-package com.mycompany.worldofzuulfxml;
+package com.mycompany.wozfxml;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
