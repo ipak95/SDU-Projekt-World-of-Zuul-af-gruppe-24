@@ -1,0 +1,5 @@
+module-info.class
+com\mycompany\wozfxml\PrimaryController.class
+com\mycompany\wozfxml\Main.class
+com\mycompany\wozfxml\App.class
+com\mycompany\wozfxml\SecondaryController.class
