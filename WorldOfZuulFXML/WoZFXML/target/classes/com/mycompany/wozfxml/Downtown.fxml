@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.DowntownController">
+   <children>
+      <TextArea prefHeight="58.0" prefWidth="981.0" />
+      <ImageView fitHeight="403.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </ImageView>
+      <TextArea prefHeight="176.0" prefWidth="982.0" />
+      <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
+         <children>
+            <Button mnemonicParsing="false" text="The Beach">
+               <HBox.margin>
+                  <Insets left="100.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="460.0" layoutY="50.0" mnemonicParsing="false" text="The Park">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="554.0" layoutY="50.0" mnemonicParsing="false" text="The Harbour">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="648.0" layoutY="50.0" mnemonicParsing="false" text="Home">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
+               <HBox.margin>
+                  <Insets left="200.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </HBox>
+      <HBox prefHeight="23.0" prefWidth="1017.0">
+         <children>
+            <Button mnemonicParsing="false" text="Quit">
+               <HBox.margin>
+                  <Insets left="100.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="30.0" layoutY="50.0" mnemonicParsing="false" text="Help">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="82.0" layoutY="10.0" mnemonicParsing="false" text="Look">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="186.0" layoutY="10.0" mnemonicParsing="false" text="View Inventory">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="238.0" layoutY="10.0" mnemonicParsing="false" text="Build">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="290.0" layoutY="10.0" mnemonicParsing="false" text="Map">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="528.0" layoutY="50.0" mnemonicParsing="false" text="Answer C">
+               <HBox.margin>
+                  <Insets left="100.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="668.0" layoutY="50.0" mnemonicParsing="false" text="Answer D">
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</FlowPane>

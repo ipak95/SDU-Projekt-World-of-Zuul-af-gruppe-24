@@ -13,7 +13,7 @@
         <Label text ="coal and other co2 emission energy-sources is creating" />
         <Label text="You will have to collect parts which ultimately allows you to create a working solar cell and thous" />
          <Label text="winning this game" />
-      <Button fx:id="primaryButton" text="Start Game" onAction="#switchToSecondary"/>
+      <Button fx:id="HomeButton" text="Start Game" onAction="#switchToHome"/>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
