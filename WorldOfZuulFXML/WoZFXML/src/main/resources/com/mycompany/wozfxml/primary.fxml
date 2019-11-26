@@ -7,8 +7,13 @@
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.PrimaryController">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <Label text ="Welcome to our game"/>
+        <Label text ="In this game you will learn about solar cells and how ecofriendly energi-sources can help save the environment." />
+        <Label text ="Throughout this game you will learn about ecofriendly energy and how you can help fight the disasters that" />
+        <Label text ="coal and other co2 emission energy-sources is creating" />
+        <Label text="You will have to collect parts which ultimately allows you to create a working solar cell and thous" />
+         <Label text="winning this game" />
+      <Button fx:id="primaryButton" text="Start Game" onAction="#switchToSecondary"/>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
