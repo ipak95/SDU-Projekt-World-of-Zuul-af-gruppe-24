@@ -1,5 +1,6 @@
 package com.mycompany.wozfxml;
 
+import Domain.Game;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,10 +15,13 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-
+    
+    public static Game game;
+    
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 982, 792);
+        game = new Game();
         stage.setTitle("World of Zuul (Group 24) - World Of Sool");
         stage.setScene(scene);
         stage.show();
