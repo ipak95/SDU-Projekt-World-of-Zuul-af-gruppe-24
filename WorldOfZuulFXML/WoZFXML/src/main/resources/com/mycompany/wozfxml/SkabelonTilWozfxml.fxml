@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.SkabelonTilWozfxmlController">
    <children>
       <TextArea prefHeight="58.0" prefWidth="981.0" />
       <ImageView fitHeight="403.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
