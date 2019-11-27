@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.HomeController">
    <children>
       <TextArea prefHeight="58.0" prefWidth="981.0" />
@@ -19,30 +18,15 @@
       <TextArea prefHeight="176.0" prefWidth="982.0" />
       <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
          <children>
-            <Button fx:id="DowntownButton" onAction="#switchToDowntown" mnemonicParsing="false" text="Downtown" >
+            <Button fx:id="DowntownButton" mnemonicParsing="false" onAction="#switchToDowntown" text="Downtown">
                <HBox.margin>
                   <Insets left="100.0" top="40.0" />
                </HBox.margin>
                
             </Button>
-            <Button layoutX="460.0" layoutY="50.0" mnemonicParsing="false" text="Downtown">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
-            <Button layoutX="554.0" layoutY="50.0" mnemonicParsing="false" text="Downtown">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
-            <Button layoutX="648.0" layoutY="50.0" mnemonicParsing="false" text="Downtown">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
             <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
                <HBox.margin>
-                  <Insets left="200.0" top="40.0" />
+                  <Insets left="485.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">

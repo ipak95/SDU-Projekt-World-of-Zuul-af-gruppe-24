@@ -19,7 +19,7 @@
       <TextArea prefHeight="176.0" prefWidth="982.0" />
       <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
          <children>
-            <Button mnemonicParsing="false" text="The Beach">
+            <Button fx:id="BeachButton" mnemonicParsing="false" onAction="#switchToBeach" text="Beach">
                <HBox.margin>
                   <Insets left="100.0" top="40.0" />
                </HBox.margin>
@@ -34,7 +34,7 @@
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="648.0" layoutY="50.0" mnemonicParsing="false" text="Home">
+            <Button fx:id="HomeButton" onAction="#switchToHome" mnemonicParsing="false" text="Home" >
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>

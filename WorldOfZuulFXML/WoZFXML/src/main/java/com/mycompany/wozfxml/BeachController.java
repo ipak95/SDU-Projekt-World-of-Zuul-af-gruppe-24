@@ -15,28 +15,19 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author thkri
+ * @author sebab_000
  */
-public class DowntownController implements Initializable {
+public class BeachController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
     @FXML
-    private void switchToHome() throws IOException {
-        App.setRoot("Home");
-        //App.game. / Insert method or event handler
-    }
-    
-    @FXML
-    private void switchToBeach() throws IOException {
-        App.setRoot("Beach");
+    private void switchToDowntown() throws IOException {
+        App.setRoot("Downtown");
         //App.game. / Insert method or event handler
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        // TODO
     }    
     
 }
