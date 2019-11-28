@@ -20,7 +20,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 982, 792);
+        scene = new Scene(loadFXML("primary"), 950, 944);
         game = new Game();
         stage.setTitle("World of Zuul (Group 24) - World Of Sool");
         stage.setScene(scene);
