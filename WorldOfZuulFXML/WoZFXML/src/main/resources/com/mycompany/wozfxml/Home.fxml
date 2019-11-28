@@ -6,10 +6,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.HomeController">
    <children>
-      <TextArea prefHeight="58.0" prefWidth="981.0" />
+      <TextArea fx:id="HomeShortDescription" editable="false" prefHeight="58.0" prefWidth="981.0" text="In your home, where it's all calm and safe">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></TextArea>
       <ImageView fitHeight="403.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
          <FlowPane.margin>
             <Insets />
@@ -26,7 +30,7 @@
             </Button>
             <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
                <HBox.margin>
-                  <Insets left="485.0" top="40.0" />
+                  <Insets left="484.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">

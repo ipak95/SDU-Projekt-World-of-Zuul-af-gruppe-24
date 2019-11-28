@@ -21,6 +21,7 @@ public class HomeController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");

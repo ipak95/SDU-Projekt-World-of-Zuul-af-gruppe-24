@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.DowntownController">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.UniversityController">
    <children>
-      <TextArea fx:id="DowntownShortDescription" editable="False" prefHeight="58.0" prefWidth="981.0" text="Downtown, with lots of people, traffic and noise. Not a calm place at all">
+      <TextArea fx:id="UniversityShortDescription" editable="False" prefHeight="58.0" prefWidth="981.0" text="In the university, where knowledge is acquired and used">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font></TextArea>
@@ -22,29 +22,14 @@
       <TextArea prefHeight="176.0" prefWidth="982.0" />
       <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
          <children>
-            <Button fx:id="BeachButton" mnemonicParsing="false" onAction="#switchToBeach" text="Beach">
+            <Button fx:id="MallButton" mnemonicParsing="false" onAction="#switchToMall" text="The Mall">
                <HBox.margin>
                   <Insets left="100.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="ParkButton" mnemonicParsing="false" onAction="#switchToPark" text="The Park">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="HarbourButton" mnemonicParsing="false" onAction="#switchToHarbour" text="The Harbour">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchToHome" text="Home">
-               <HBox.margin>
-                  <Insets left="20.0" top="40.0" />
-               </HBox.margin>
-            </Button>
             <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
                <HBox.margin>
-                  <Insets left="256.0" top="40.0" />
+                  <Insets left="496.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">

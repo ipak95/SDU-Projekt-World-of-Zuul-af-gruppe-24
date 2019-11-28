@@ -17,35 +17,28 @@ import javafx.fxml.Initializable;
  *
  * @author thkri
  */
-public class DowntownController implements Initializable {
+public class MallController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
     @FXML
-    private void switchToHome() throws IOException {
-        App.setRoot("Home");
-        //App.game. / Insert method or event handler
-    }
-    
-    @FXML
-    private void switchToBeach() throws IOException {
-        App.setRoot("Beach");
-        //App.game. / Insert method or event handler
-    }
-    
-     @FXML
-    private void switchToHarbour() throws IOException {
-        App.setRoot("Harbour");
-        //App.game. / Insert method or event handler
-    }
-    
-     @FXML
     private void switchToPark() throws IOException {
         App.setRoot("Park");
         //App.game. / Insert method or event handler
     }
     
+    @FXML
+    private void switchToRoof() throws IOException {
+        App.setRoot("Roof");
+        //App.game. / Insert method or event handler
+    }
+    
+     @FXML
+    private void switchToUniversity() throws IOException {
+        App.setRoot("University");
+        //App.game. / Insert method or event handler
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
