@@ -6,11 +6,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-
+<?import javafx.scene.text.Font?>
 
 <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.wozfxml.DowntownController">
    <children>
-      <TextArea prefHeight="58.0" prefWidth="981.0" />
+      <TextArea fx:id="DowntownShortDescription" editable="False" prefHeight="58.0" prefWidth="981.0" text="Downtown, with lots of people, traffic and noise. Not a calm place at all">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></TextArea>
       <ImageView fitHeight="403.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
          <FlowPane.margin>
             <Insets />
@@ -24,24 +27,24 @@
                   <Insets left="100.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="460.0" layoutY="50.0" mnemonicParsing="false" text="The Park">
+            <Button fx:id="ParkButton" mnemonicParsing="false" onAction="#switchToPark" text="The Park">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="554.0" layoutY="50.0" mnemonicParsing="false" text="The Harbour">
+            <Button fx:id="HarbourButton" mnemonicParsing="false" onAction="#switchToHarbour" text="The Harbour">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="HomeButton" onAction="#switchToHome" mnemonicParsing="false" text="Home" >
+            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchToHome" text="Home">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
                <HBox.margin>
-                  <Insets left="200.0" top="40.0" />
+                  <Insets left="256.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">

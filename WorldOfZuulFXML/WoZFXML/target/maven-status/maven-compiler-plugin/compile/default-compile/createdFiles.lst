@@ -1,9 +1,14 @@
+com\mycompany\wozfxml\RoofController.class
 module-info.class
 com\mycompany\wozfxml\PrimaryController.class
-com\mycompany\wozfxml\SkabelonTilWozfxmlController.class
+com\mycompany\wozfxml\App.class
+com\mycompany\wozfxml\MallController.class
+com\mycompany\wozfxml\ParkController.class
+com\mycompany\wozfxml\StationController.class
 Domain\Game.class
-Domain\Item.class
 Domain\Player.class
 com\mycompany\wozfxml\Main.class
 Domain\Room.class
-com\mycompany\wozfxml\App.class
+com\mycompany\wozfxml\HarbourController.class
+Domain\Item.class
+com\mycompany\wozfxml\UniversityController.class
