@@ -1,5 +1,6 @@
 package com.mycompany.wozfxml;
 
+import Domain.Room;
 import Domain.Game;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

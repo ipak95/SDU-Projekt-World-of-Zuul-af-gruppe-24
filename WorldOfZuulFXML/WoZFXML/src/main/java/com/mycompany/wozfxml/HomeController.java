@@ -26,11 +26,17 @@ public class HomeController implements Initializable {
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
+        App.game.setCurrentRoom("Downtown");
+        
         //App.game. / Insert method or event handler
     }
     
     @FXML
     public TextArea longdescription;
+    
+    @FXML
+    public TextArea QandA;
+    
     
     
     @FXML
@@ -38,6 +44,7 @@ public class HomeController implements Initializable {
        longdescription.setText(App.game.lookAround());
         //App.game. / Insert method or event handler
     }
+    
     
     
     @Override
