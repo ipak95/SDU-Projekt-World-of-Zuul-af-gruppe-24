@@ -49,7 +49,7 @@
             </Button>
             <Button layoutX="392.0" layoutY="50.0" mnemonicParsing="false" text="Answer A">
                <HBox.margin>
-                  <Insets left="542.0" top="40.0" />
+                  <Insets left="543.0" top="40.0" />
                </HBox.margin>
             </Button>
             <Button layoutX="666.0" layoutY="50.0" mnemonicParsing="false" text="Answer B">
