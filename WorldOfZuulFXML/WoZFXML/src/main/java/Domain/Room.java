@@ -12,13 +12,13 @@ public class Room
     private String longDescription;
     private String question;
     private final String answers;
-    private final String correctAnswer;
+    private final char correctAnswer;
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
     private boolean talk = false;
     
 
-    public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, String correctAnswer)
+    public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, char correctAnswer)
     {
         this.name = name;
         this.description = description;
@@ -38,7 +38,7 @@ public class Room
         return answers;
     }
 
-    public String getCorrectAnswer() {
+    public char getCorrectAnswer() {
         return correctAnswer;
     }
 

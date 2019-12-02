@@ -33,7 +33,7 @@ public class Game {
                         "bright, almost blinding you. The coffee is almost done, and you sit down in your recliner. You" + "\n" +
                         "turn on the tv and this is when you realise that all these electronics are using electricity. Maybe" + "\n" +
                         "there is a better source than fossil fuels to power all of it. Let’s go on an adventure to find out!",
-                "", "", "");
+                "", "", 'p');
 
         downtown = new Room("downtown", "Downtown, with lots of people, traffic and noise. Not a calm place at all", true,
                 "You look around. You see a lot of burning light, even though it’s not dark. You wonder why all" + "\n" +
@@ -44,13 +44,13 @@ public class Game {
                 "A: Why are you talking to me?" + "\n" +
                         "B: You think? I’m not sure actually" + "\n" +
                         "C: Yes! We could use something like solar panels" + "\n" +
-                        "D: It’s not possible", "c");
+                        "D: It’s not possible", 'c');
 
         beach = new Room("beach", "At the beach, where the calming sound of the waves embraces you", false,
                 "You walk along the beach, sniffs in the fresh air. You are almost alone, only some seagulls" + "\n"
                         + "screams in the distance. You suddenly spot a bottle with what seems to be a note inside. It" + "\n"
                         + "could be fun to see what is says.",
-                "", "", "");
+                "", "", 'p');
 
         harbour = new Room("harbour", "At the harbour, where ships and seagulls come in all shapes and sizes", true,
                 "You see plenty of old people. Relaxing at the pier, just admiring the beautiful ships. There are a" + "\n" +
@@ -64,7 +64,7 @@ public class Game {
                 "A: Make him understand your points through harsh words" + "\n" +
                         "B: You can’t teach an old dog new tricks. Just leave and let him be grumpy." + "\n" +
                         "C: Talk about how you can reduce the pollution to a minimum by using solar panels and by that helping save the planet" + "\n" +
-                        "D: Do a flip", "c");
+                        "D: Do a flip", 'c');
 
         station = new Room("station", "At the station, where it's just as noisy as downtown", true,
                 "You are at the station. People seem to be in a rush to get wherever they need to be. There is a" + "\n" +
@@ -76,7 +76,7 @@ public class Game {
                         "should buy a ticket home for later?",
                 "Counter lady: Hello sir, what type of transportation method would you like to use today? If you" + "\n" +
                         "choose our most environmentally friendly choice, I'll give you a reward!",
-                "A: A taxi" + "\n" + "B: An electric bus" + "\n" + "C: A steam locomotive" + "\n" + "D: Rent a scooter", "b");
+                "A: A taxi" + "\n" + "B: An electric bus" + "\n" + "C: A steam locomotive" + "\n" + "D: Rent a scooter", 'b');
 
         park = new Room("park", "In the park, a small oasis in the middle of this concrete jungle", true,
                 "You are standing in the middle of the park. The place seems to be quiet and peaceful. Suddenly" + "\n" +
@@ -84,7 +84,7 @@ public class Game {
                         "go check it out / look around to see if they have anything useful to say?",
                 "Activist asks with an angry voice: Do you know what the cleanest form for energy is",
                 "A: Solar power station " + "\n" + "B: Coal-fired power station" + "\n" +
-                        "C: Fuel power station" + "\n" + "D: Nuclear power station", "a");
+                        "C: Fuel power station" + "\n" + "D: Nuclear power station", 'a');
 
         mall = new Room("mall", "At the mall, a good place to spend your hard earned money", true,
                 "In your quest to find the remaining pieces for your solar panel you find yourself at the mall. Next" + "\n" +
@@ -95,7 +95,7 @@ public class Game {
                         "important question about clean energy. Why use solar panels?",
                 "A: Because it with help reducing CO2 emission and you can make money of it" + "\n" + "B: Because it increases global warming" + "\n" +
                         "C: Because you can make money" + "\n" + "D: It will look good on your house",
-                "a");
+                'a');
 
         rooftop = new Room("rooftop", "On top of the mall, where the sun is always shining, ready to be 'harvested'", true,
                 "You find yourself on the roof of the mall. You see a man with a glass container in his hand. On" + "\n" +
@@ -105,12 +105,12 @@ public class Game {
                         "a solar solution.",
                 "A: It’s a smarter choice" + "\n" + "B: Save the children!" + "\n" +
                         "C: Because, you know, just do it!" + "\n" + "D: Save thousands of dollars and increase property value",
-                "d");
+                'd');
 
         university = new Room("university", "In the university, where knowledge is acquired and used", true,
                 "You enter the university. People are sitting at tables, studying and talking. A lector is working on" + "\n" +
                         "some electronics inside a lab. He looks knowledgeable. Maybe he can help you with assembling the solar panel?",
-                "", "", "");
+                "", "", 'p');
 
         //"Mapping out" all the rooms and how the are connected (setExit)
         home.setExit("downtown", downtown);
@@ -181,19 +181,6 @@ public class Game {
 //        System.out.println("Thank you for playing.  Goodbye.");
 //    }
 //
-//    private void printWelcome() {
-//        System.out.println();
-//        System.out.println("Welcome to our game");
-//        System.out.println("In this game you will learn about solar cells and how ecofriendly energi-sources can help save the environment.");
-//        System.out.println("Throughout this game you will learn about ecofriendly energy and how you can help fight the disasters that");
-//        System.out.println("coal and other co2 emission energy-sources is creating.");
-//        System.out.println("You will have to collect parts which ultimately allows you to create a working solar cell and thous ");
-//        System.out.println(" winning this game.");
-//        System.out.println(" ");
-//        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
-//        System.out.println();
-//        System.out.println(currentRoom.getShortDescription());
-//    }
 //    private void printHelp() {
 //        System.out.println("You are lost. You are alone. You wander");
 //        System.out.println("around at the " + currentRoom.getName());
@@ -228,12 +215,9 @@ public class Game {
         switch (Room) {
 
             case "Downtown":
-                
                 currentRoom = downtown;
-                
                 break;
                 
-
             case "Beach":
                 currentRoom = beach;
                 break;
@@ -279,30 +263,33 @@ public class Game {
 //    }
 //
 //    // this command checks if the answer given by the player is equal to the String value from correctAnswer
-//    public void answer(Command command) {
-//        // If answer "this letter" is the same as the argument correctAnswer value
-//        // This makes it so the player can only type an answer if the "talkTo" method has been used in the room
-//        if (currentRoom.isTalk() == true && command.hasSecondWord() && command.getSecondWord().equals(currentRoom.getCorrectAnswer())) {
-//            System.out.println("You answered correct!");
-//            System.out.println("A part has been added to your inventory");
-//            System.out.println();
-//            player.addItem(items.get(currentRoom.getName()));
-//            currentRoom.setRoomHasPerson(false);
-//            currentRoom.setTalk(false);
-//            //Checks for a person in the room. No reason in printing wrong/correct answer if no person exist in room
-//        } else if (currentRoom.doesRoomHasPerson() == false) {
-//            System.out.println("No question's or answer's in here");
-//            System.out.println();
-//            // Hinting the player about talking to the person before answering the question or typing in the answer
-//        } else if (currentRoom.isTalk() == false && command.hasSecondWord()) {
-//            System.out.println("You can't answer anything yet..");
-//            System.out.println("(Hint: Try and talk to a person first)");
-//            System.out.println();
-//        } else {
-//            System.out.println("Wrong answer. Try again!");
-//            System.out.println();
-//        }
-//    }
+    public String answer(char answer) {
+        // If answer is the same as the argument correctAnswer value
+        // This makes it so the player can only type an answer if the "talkTo" method has been used in the room
+        
+        if (currentRoom.isTalk() == true && currentRoom.getCorrectAnswer() == answer) {
+            currentRoom.setRoomHasPerson(false);
+            currentRoom.setTalk(false);
+            
+            // player.addItem(items.get(currentRoom.getName()));
+            
+            return "You answered correct! \n A part has been added to your inventory";
+            
+           
+                        
+            //Checks for a person in the room. No reason in printing wrong/correct answer if no person exist in room
+        } else if (currentRoom.doesRoomHasPerson() == false) {
+            return "No question's or answer's in here";
+            
+            // Hinting the player about talking to the person before answering the question or typing in the answer
+        } else if (currentRoom.isTalk() == false ) {
+            return "You can't answer anything yet.. \n (Hint: Try and talk to a person first)";
+
+        } else {
+            return "Wrong answer. Try again!";
+            
+        }
+    }
 
 //    public boolean buildToWin(Command command) {
 //        if (command.hasSecondWord()) {
