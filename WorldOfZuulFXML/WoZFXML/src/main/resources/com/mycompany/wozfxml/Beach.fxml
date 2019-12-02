@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -29,10 +30,13 @@
             </Button>
          </children>
       </HBox>
-      <ImageView fitHeight="321.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="321.0" fitWidth="950.0" pickOnBounds="true">
          <FlowPane.margin>
             <Insets />
          </FlowPane.margin>
+         <image>
+            <Image url="@pics/beach.jpg" />
+         </image>
       </ImageView>
       <TextArea editable="False" prefHeight="55.0" prefWidth="950.0" text="At the beach, where the calming sound of the waves embraces you">
          <font>

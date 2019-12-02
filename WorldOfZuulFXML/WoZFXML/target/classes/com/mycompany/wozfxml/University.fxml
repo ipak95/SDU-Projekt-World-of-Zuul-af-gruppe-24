@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -29,16 +30,19 @@
             </Button>
          </children>
       </HBox>
-      <ImageView fitHeight="321.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="321.0" fitWidth="949.0" pickOnBounds="true">
          <FlowPane.margin>
             <Insets />
          </FlowPane.margin>
+         <image>
+            <Image url="@pics/university.jpg" />
+         </image>
       </ImageView>
       <TextArea editable="False" prefHeight="55.0" prefWidth="950.0" text="In the university, where knowledge is acquired and used">
          <font>
             <Font name="System Italic" size="17.0" />
          </font></TextArea>
-      <TextArea fx:id="longdescription" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="950.0"/>
+      <TextArea fx:id="longdescription" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="950.0" />
       <TextArea fx:id="QandA" editable="false" focusTraversable="false" prefHeight="137.0" prefWidth="950.0" />
       <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
          <children>
@@ -64,12 +68,12 @@
       </HBox>
       <HBox prefHeight="23.0" prefWidth="1017.0">
          <children>
-            <Button fx:id = "lookbutton" onAction = "#switchToLongdesciption" layoutX="82.0" layoutY="10.0" mnemonicParsing="false" text="Look">
+            <Button fx:id="lookbutton" layoutX="82.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToLongdesciption" text="Look">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id = "Talkbutton" onAction = "#switchToTalk" layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
+            <Button fx:id="Talkbutton" layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToTalk" text="Talk">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
