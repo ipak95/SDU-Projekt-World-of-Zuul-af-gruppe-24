@@ -37,11 +37,15 @@ public class HomeController implements Initializable {
     @FXML
     public TextArea QandA;
     
-    
-    
     @FXML
     private void switchToLongdesciption() throws IOException {
        longdescription.setText(App.game.lookAround());
+        //App.game. / Insert method or event handler
+    }
+    
+    @FXML
+    private void switchToTalk() throws IOException {
+       longdescription.setText(App.game.talkTo());
         //App.game. / Insert method or event handler
     }
     
