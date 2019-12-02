@@ -194,53 +194,6 @@ public class Game {
 //        System.out.println();
 //        System.out.println(currentRoom.getShortDescription());
 //    }
-//
-//    private boolean processCommand(Command command) {
-//
-//        CommandWord commandWord = command.getCommandWord();
-//
-//        switch (commandWord) {
-//
-//            case HELP:
-//                printHelp();
-//                break;
-//
-//            case GO:
-//                goRoom(command);
-//                break;
-//
-//            case QUIT:
-//                wantToQuit = quit(command);
-//                break;
-//
-//            case LOOK:
-//                lookAround(command);
-//                break;
-//
-//            case VIEW:
-//                viewInventory(command);
-//                break;
-//
-//            case TALK:
-//                talkTo(command);
-//                break;
-//
-//            case ANSWER:
-//                answer(command);
-//                break;
-//
-//            case BUILD:
-//                buildToWin(command);
-//                break;
-//
-//            default:
-//                System.out.println("I don't know what you mean...");
-//                System.out.println();
-//        }
-//
-//        return this.wantToQuit;
-//    }
-//
 //    private void printHelp() {
 //        System.out.println("You are lost. You are alone. You wander");
 //        System.out.println("around at the " + currentRoom.getName());
@@ -248,28 +201,6 @@ public class Game {
 //        System.out.println("Your command words are:");
 //        parser.showCommands();
 //    }
-//
-//    private void goRoom(Command command) {
-//        if (!command.hasSecondWord()) {
-//            System.out.println("Go where?");
-//            System.out.println();
-//            return;
-//        }
-//
-//        String direction = command.getSecondWord();
-//
-//        Room nextRoom = currentRoom.getExit(direction);
-//
-//        if (nextRoom == null) {
-//            System.out.println("There is no door!");
-//            System.out.println();
-//        } else {
-//            currentRoom = nextRoom;
-//            System.out.println();
-//            System.out.println(currentRoom.getShortDescription());
-//        }
-//    }
-//
 //    private boolean quit(Command command) {
 //        if (command.hasSecondWord()) {
 //            System.out.println("Quit what?");
