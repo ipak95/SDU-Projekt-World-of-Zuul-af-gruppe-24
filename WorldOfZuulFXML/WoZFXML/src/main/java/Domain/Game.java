@@ -277,15 +277,10 @@ public class Game {
 //        }
 //    }
 //
-//    private void lookAround(Command command) {
-//        if (command.hasSecondWord() && command.getSecondWord().equals("around")) {
-//            System.out.println(currentRoom.getLongDescription());
-//            currentRoom.setTalk(true);
-//        } else {
-//            System.out.println("Look where?  (Hint: around)");
-//            System.out.println();
-//        }
-//    }
+    public String lookAround() {
+           currentRoom.setTalk(true);
+           return currentRoom.getLongDescription();
+        }
 //
 //    private void talkTo(Command command) {
 //        if (command.hasSecondWord()) {
