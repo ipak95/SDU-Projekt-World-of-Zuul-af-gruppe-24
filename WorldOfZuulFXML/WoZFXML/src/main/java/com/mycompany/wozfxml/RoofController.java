@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextArea;
 
 /**
  * FXML Controller class
@@ -19,9 +20,24 @@ import javafx.fxml.Initializable;
  */
 public class RoofController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    public TextArea longdescription;
+    
+    @FXML
+    public TextArea QandA;
+    
+    @FXML
+    private void switchToLongdesciption() throws IOException {
+       longdescription.setText(App.game.lookAround());
+        //App.game. / Insert method or event handler
+    }
+    
+    @FXML
+    private void switchToTalk() throws IOException {
+       longdescription.setText(App.game.talkTo());
+        //App.game. / Insert method or event handler
+    }
+    
     @FXML
     private void switchToMall() throws IOException {
         App.setRoot("Mall");

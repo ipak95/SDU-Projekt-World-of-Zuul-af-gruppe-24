@@ -70,7 +70,7 @@
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
+            <Button fx:id = "Talkbutton" onAction = "#switchToTalk" layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
