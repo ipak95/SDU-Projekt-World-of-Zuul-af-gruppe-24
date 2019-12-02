@@ -67,6 +67,26 @@ public class DowntownController implements Initializable {
        longdescription.setText(App.game.talkTo());
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToAnswerA() throws IOException {
+       longdescription.setText(App.game.answer('a'));
+        //App.game. / Insert method or event handler
+    }
+    @FXML
+    private void switchToAnswerB() throws IOException {
+       longdescription.setText(App.game.answer('b'));
+        //App.game. / Insert method or event handler
+    }
+    @FXML
+    private void switchToAnswerC() throws IOException {
+       longdescription.setText(App.game.answer('c'));
+        //App.game. / Insert method or event handler
+    }
+    @FXML
+    private void switchToAnswerD() throws IOException {
+       longdescription.setText(App.game.answer('d'));
+        //App.game. / Insert method or event handler
+    }
     
     
     @Override
