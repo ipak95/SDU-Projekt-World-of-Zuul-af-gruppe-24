@@ -11,10 +11,13 @@ public class Game {
     private Player player;
     //private Parser parser;
     private Room currentRoom;
+    
     private boolean talk;
     private ArrayList<Room> rooms = new ArrayList<>();
     private HashMap<String, Item> items = new HashMap<>();
 
+    Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
+    
     public Game() {
         createRooms();
         //parser = new Parser();
@@ -22,8 +25,8 @@ public class Game {
         createItems();
     }
 
-    private void createRooms() {
-        Room home, downtown, beach, harbour, station, park, mall, university, rooftop;
+    public void createRooms() {
+        
 
         home = new Room("home", "In your home, where it's all calm and safe", false,
                 "It is your room. The radio is on with your favourite song. The light from your lightbulb is shining" + "\n" +
@@ -148,7 +151,7 @@ public class Game {
         rooms.add(rooftop);
         rooms.add(university);
     }
-
+ 
     public void createItems() {
         Item part1, part2, part3, part4, part5, part6;
 
@@ -281,24 +284,59 @@ public class Game {
            currentRoom.setTalk(true);
            return currentRoom.getLongDescription();
         }
-//
-//    private void talkTo(Command command) {
-//        if (command.hasSecondWord()) {
-//            System.out.println("What are you trying to do?   (Hint: Talk)");
-//            System.out.println();
-//        } else {
-//            if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
-//                System.out.println(currentRoom.getQuestion());
-//                System.out.println("");
-//                System.out.println(currentRoom.getAnswers());
-//                System.out.println("(Type answer a, answer b, answer c or answer d to answer)");
-//                System.out.println();
-//            } else {
-//                System.out.println("There's no one to talk to");
-//                System.out.println();
-//            }
-//        }
-//    }
+
+    public String talkTo() {
+            if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
+                return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers() + "\n (Press answer a, answer b, answer c or answer d to answer)";
+            } 
+            else {
+                return "There's no one to talk to";
+            }
+        }
+    public void setCurrentRoom(String Room) {
+        switch (Room) {
+
+            case "Downtown":
+                
+                currentRoom = downtown;
+                
+                break;
+                
+
+            case "Beach":
+                currentRoom = beach;
+                break;
+
+            case "Harbour":
+                currentRoom = harbour;
+                break;
+
+            case "Home":
+                currentRoom = home;
+                break;
+
+            case "Mall":
+                currentRoom = mall;
+                break;
+
+            case "Park":
+                currentRoom = park;
+                break;
+
+            case "Rooftop":
+                currentRoom = rooftop;
+                break;
+
+            case "Station":
+                currentRoom = station;
+                break;
+                
+            case "University":
+                currentRoom = university;
+                break;
+            
+        }
+    }
 //
 //    public void viewInventory(Command command) {
 //        if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {

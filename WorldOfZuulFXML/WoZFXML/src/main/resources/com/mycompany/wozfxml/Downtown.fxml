@@ -38,8 +38,8 @@
          <font>
             <Font name="System Italic" size="17.0" />
          </font></TextArea>
-      <TextArea prefHeight="200.0" prefWidth="950.0" />
-      <TextArea prefHeight="137.0" prefWidth="950.0" />
+      <TextArea fx:id="longdescription" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="950.0" />
+      <TextArea fx:id="QandA" editable="false" focusTraversable="false" prefHeight="137.0" prefWidth="950.0" />
       <HBox layoutX="10.0" layoutY="610.0" prefHeight="65.0" prefWidth="981.0">
          <children>
             <Button fx:id="BeachButton" mnemonicParsing="false" onAction="#switchToBeach" text="Beach">
@@ -79,12 +79,12 @@
       </HBox>
       <HBox prefHeight="23.0" prefWidth="1017.0">
          <children>
-            <Button layoutX="82.0" layoutY="10.0" mnemonicParsing="false" text="Look">
+            <Button fx:id = "lookbutton" onAction = "#switchToLongdesciption" layoutX="82.0" layoutY="10.0" mnemonicParsing="false" text="Look">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
+            <Button fx:id = "Talkbutton" onAction = "#switchToTalk" layoutX="134.0" layoutY="10.0" mnemonicParsing="false" text="Talk">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
