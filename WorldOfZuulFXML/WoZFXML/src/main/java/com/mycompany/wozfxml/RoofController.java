@@ -25,6 +25,7 @@ public class RoofController implements Initializable {
     @FXML
     private void switchToMall() throws IOException {
         App.setRoot("Mall");
+        App.game.setCurrentRoom("Mall");
         //App.game. / Insert method or event handler
     }
 

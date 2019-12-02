@@ -25,12 +25,14 @@ public class StationController implements Initializable {
     @FXML
     private void switchToHarbour() throws IOException {
         App.setRoot("Harbour");
+        App.game.setCurrentRoom("Harbour");
         //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToBeach() throws IOException {
         App.setRoot("Beach");
+        App.game.setCurrentRoom("Beach");
         //App.game. / Insert method or event handler
     }
     

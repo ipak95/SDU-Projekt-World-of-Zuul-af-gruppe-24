@@ -25,12 +25,14 @@ public class HarbourController implements Initializable {
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
+        App.game.setCurrentRoom("Downtown");
         //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToStation() throws IOException {
         App.setRoot("Station");
+        App.game.setCurrentRoom("Station");
         //App.game. / Insert method or event handler
     }
     

@@ -25,18 +25,21 @@ public class MallController implements Initializable {
     @FXML
     private void switchToPark() throws IOException {
         App.setRoot("Park");
+        App.game.setCurrentRoom("Park");
         //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToRoof() throws IOException {
         App.setRoot("Roof");
+        App.game.setCurrentRoom("Rooftop");
         //App.game. / Insert method or event handler
     }
     
      @FXML
     private void switchToUniversity() throws IOException {
         App.setRoot("University");
+        App.game.setCurrentRoom("University");
         //App.game. / Insert method or event handler
     }
     

@@ -25,12 +25,14 @@ public class ParkController implements Initializable {
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
+        App.game.setCurrentRoom("Downtown");
         //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToMall() throws IOException {
         App.setRoot("Mall");
+        App.game.setCurrentRoom("Mall");
         //App.game. / Insert method or event handler
     }
     

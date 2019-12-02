@@ -22,6 +22,7 @@ public class BeachController implements Initializable {
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
+        App.game.setCurrentRoom("Downtown");
         //App.game. / Insert method or event handler
     }
     

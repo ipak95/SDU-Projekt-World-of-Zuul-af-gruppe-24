@@ -31,24 +31,28 @@ public class DowntownController implements Initializable {
     @FXML
     private void switchToHome() throws IOException {
         App.setRoot("Home");
+        App.game.setCurrentRoom("Home");
         //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToBeach() throws IOException {
         App.setRoot("Beach");
+        App.game.setCurrentRoom("Beach");
         //App.game. / Insert method or event handler
     }
     
      @FXML
     private void switchToHarbour() throws IOException {
         App.setRoot("Harbour");
+        App.game.setCurrentRoom("Harbour");
         //App.game. / Insert method or event handler
     }
     
      @FXML
     private void switchToPark() throws IOException {
         App.setRoot("Park");
+        App.game.setCurrentRoom("Park");
         //App.game. / Insert method or event handler
     }
        
