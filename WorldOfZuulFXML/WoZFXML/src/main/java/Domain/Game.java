@@ -204,7 +204,21 @@ public class Game {
         }
 
     public String talkTo() {
-            if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
+        if (currentRoom.getName().equals("university")){
+            if (player.getInventory().size() < 6){
+            return "You need more parts to complete this game";
+            }
+            else if (player.getInventory().size() >= 6){
+            return "Congratulations, you have won the game! You gathered all the solar panel pieces"
+                    + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
+                    + "\n"
+                    + "Use the knowledge wisely and make a change where you can!"
+                    + " (Press any button to quit)";
+            }
+        }
+                
+        
+        if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
                 return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers() + "\n (Press answer a, answer b, answer c or answer d to answer)";
             } 
             else {
@@ -271,7 +285,7 @@ public class Game {
             currentRoom.setRoomHasPerson(false);
             currentRoom.setTalk(false);
             
-            // player.addItem(items.get(currentRoom.getName()));
+            player.addItem(items.get(currentRoom.getName()));
             
             return "You answered correct! \n A part has been added to your inventory";
             
@@ -291,23 +305,22 @@ public class Game {
         }
     }
 
-//    public boolean buildToWin(Command command) {
-//        if (command.hasSecondWord()) {
-//            System.out.println("What are trying to do?  (Hint: build) ");
-//        } else if (!currentRoom.getName().equals("university")) {
-//            System.out.println("You should probably do this in the University instead of here");
-//        } else if (currentRoom.getName().equals("university") && player.getInventory().size() < 6) {
-//            System.out.println("You need more parts to complete this game");
-//        } else if (currentRoom.getName().equals("university") && player.getInventory().size() >= 6) {
-//            System.out.println("Congratulations, you have won the game! You gathered all the solar panel pieces"
-//                    + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
-//                    + "\n"
-//                    + "Use the knowledge wisely and make a change where you can!"
-//                    + " (Press any button to quit)");
-//            Scanner sc = new Scanner(System.in);
-//            sc.nextLine();
-//            return wantToQuit = true;
-//        }
-//        return false;
-//    }
+    public boolean buildToWin() {
+          System.out.println("What are trying to do?  (Hint: build) ");
+        if (!currentRoom.getName().equals("university")) {
+            System.out.println("You should probably do this in the University instead of here");
+        } else if (currentRoom.getName().equals("university") && player.getInventory().size() < 6) {
+            System.out.println("You need more parts to complete this game");
+        } else if (currentRoom.getName().equals("university") && player.getInventory().size() >= 6) {
+            System.out.println("Congratulations, you have won the game! You gathered all the solar panel pieces"
+                    + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
+                    + "\n"
+                    + "Use the knowledge wisely and make a change where you can!"
+                    + " (Press any button to quit)");
+            Scanner sc = new Scanner(System.in);
+            sc.nextLine();
+            return wantToQuit = true;
+        }
+        return false;
+    }
 }
