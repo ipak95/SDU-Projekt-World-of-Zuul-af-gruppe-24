@@ -1,17 +1,17 @@
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\StationController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Room.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Player.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\UniversityController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\module-info.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\App.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\HarbourController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\HomeController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\Main.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\PrimaryController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Item.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\BeachController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\MallController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\RoofController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\ParkController.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Game.java
-C:\Users\sebab_000\Desktop\UNI\1. Semester\1. Semesterprojekt\Projekt\WoZ1\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\DowntownController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Item.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Game.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\module-info.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\Main.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\StationController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\DowntownController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\App.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\HarbourController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\BeachController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\MallController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\RoofController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\PrimaryController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\ParkController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\UniversityController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Player.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\com\mycompany\wozfxml\HomeController.java
+C:\Users\thkri\Documents\Git Projekt\World of Zuul\SDU-Projekt-World-of-Zuul-af-gruppe-24\WorldOfZuulFXML\WoZFXML\src\main\java\Domain\Room.java
