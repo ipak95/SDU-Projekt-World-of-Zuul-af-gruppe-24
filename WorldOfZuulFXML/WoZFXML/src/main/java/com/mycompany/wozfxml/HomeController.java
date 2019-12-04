@@ -68,6 +68,17 @@ public class HomeController implements Initializable {
        QandA.setText(App.game.answer('d'));
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToBuild() throws IOException {
+       QandA.setText(App.game.buildToWin());
+        //App.game. / Insert method or event handler
+    }
+    @FXML
+    private void switchToViewInventory() throws IOException {
+       QandA.setText(App.game.viewInventory());
+        //App.game. / Insert method or event handler
+    }
+    
     
     
     

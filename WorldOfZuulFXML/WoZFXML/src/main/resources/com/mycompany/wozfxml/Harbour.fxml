@@ -83,7 +83,7 @@
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="186.0" layoutY="10.0" mnemonicParsing="false" text="Build">
+            <Button fx:id="BuildButton" onAction="#switchToBuild" layoutX="186.0" layoutY="10.0" mnemonicParsing="false" text="Build">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
@@ -93,7 +93,7 @@
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="290.0" layoutY="10.0" mnemonicParsing="false" text="View Inventory">
+            <Button fx:id="ViewInventoryButton" onAction="#switchToViewInventory" layoutX="290.0" layoutY="10.0" mnemonicParsing="false" text="View Inventory">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
