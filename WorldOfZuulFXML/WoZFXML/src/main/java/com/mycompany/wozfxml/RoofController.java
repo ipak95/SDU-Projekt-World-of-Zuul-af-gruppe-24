@@ -67,6 +67,11 @@ public class RoofController implements Initializable {
        QandA.setText(App.game.viewInventory());
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToViewHelp() throws IOException {
+       App.HelpPopup.display();
+        //App.game. / Insert method or event handler
+    }
     
     @FXML
     private void switchToMall() throws IOException {

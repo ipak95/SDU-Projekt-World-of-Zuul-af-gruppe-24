@@ -1,5 +1,6 @@
 com\mycompany\wozfxml\BeachController.class
 com\mycompany\wozfxml\RoofController.class
+Domain\HelpPopup.class
 module-info.class
 com\mycompany\wozfxml\PrimaryController.class
 com\mycompany\wozfxml\App.class

@@ -180,13 +180,6 @@ public class Game {
 //        System.out.println("Thank you for playing.  Goodbye.");
 //    }
 //
-//    private void printHelp() {
-//        System.out.println("You are lost. You are alone. You wander");
-//        System.out.println("around at the " + currentRoom.getName());
-//        System.out.println();
-//        System.out.println("Your command words are:");
-//        parser.showCommands();
-//    }
 //    private boolean quit(Command command) {
 //        if (command.hasSecondWord()) {
 //            System.out.println("Quit what?");

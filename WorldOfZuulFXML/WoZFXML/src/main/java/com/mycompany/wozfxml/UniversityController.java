@@ -68,6 +68,12 @@ public class UniversityController implements Initializable {
         //App.game. / Insert method or event handler
     }
     @FXML
+    private void switchToViewHelp() throws IOException {
+       App.HelpPopup.display();
+        //App.game. / Insert method or event handler
+    }
+    
+    @FXML
     private void switchToMall() throws IOException {
         App.setRoot("Mall");
         App.game.setCurrentRoom("Mall");
