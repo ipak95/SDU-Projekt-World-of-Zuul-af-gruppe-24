@@ -18,8 +18,9 @@ public class Player {
     }
 
     // Returns items in inventory when used
-    public void displayInventory() {
-        String returnString = "Inventory: |";
+    public String displayInventory() {
+        
+        String returnString = "Inventory: | ";
 
         for (Item item : inventory) {
             returnString += item.getName() + " | ";
@@ -31,6 +32,7 @@ public class Player {
             System.out.print("Empty");
             System.out.println();
         }
+        return returnString;
     }
 }
 

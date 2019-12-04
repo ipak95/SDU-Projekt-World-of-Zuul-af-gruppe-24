@@ -203,18 +203,7 @@ public class Game {
     }
 
     public String talkTo() {
-        if (currentRoom.getName().equals("university")) {
-            if (player.getInventory().size() < 6) {
-                return "You need more parts to complete this game";
-            } else if (player.getInventory().size() >= 6) {
-                return "Congratulations, you have won the game! \n"
-                        + "You gathered all the solar panel pieces "
-                        + "and assembled it. You have contributed to a better " 
-                        + "future and gathered knowledge along the way. \n\n"
-                        + "Use the knowledge wisely and make a change where you can!";
-            }
-        }
-        if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
+                if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
             return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers() 
                     + "\n (Press answer a, answer b, answer c or answer d to answer)";
         } else {
@@ -263,17 +252,12 @@ public class Game {
 
         }
     }
-//
-//    public void viewInventory(Command command) {
-//        if (command.hasSecondWord() && command.getSecondWord().equals("inventory")) {
-//            player.displayInventory();
-//        } else {
-//            System.out.println("What do you want to view?  (Hint: inventory)");
-//            System.out.println();
-//        }
-//    }
-//
-//    // this command checks if the answer given by the player is equal to the String value from correctAnswer
+
+    public String viewInventory() {
+        return player.displayInventory();
+    }
+
+    // this command checks if the answer given by the player is equal to the String value from correctAnswer
 
     public String answer(char answer) {
         // If answer is the same as the argument correctAnswer value
@@ -301,22 +285,20 @@ public class Game {
         }
     }
 
-//    public boolean buildToWin() {
-//        System.out.println("What are trying to do?  (Hint: build) ");
-//        if (!currentRoom.getName().equals("university")) {
-//            System.out.println("You should probably do this in the University instead of here");
-//        } else if (currentRoom.getName().equals("university") && player.getInventory().size() < 6) {
-//            System.out.println("You need more parts to complete this game");
-//        } else if (currentRoom.getName().equals("university") && player.getInventory().size() >= 6) {
-//            System.out.println("Congratulations, you have won the game! You gathered all the solar panel pieces"
-//                    + " and assembled it. You have contributed to a better future and gathered knowledge along the way. \n"
-//                    + "\n"
-//                    + "Use the knowledge wisely and make a change where you can!"
-//                    + " (Press any button to quit)");
-//            Scanner sc = new Scanner(System.in);
-//            sc.nextLine();
-//            return wantToQuit = true;
-//        }
-//        return false;
-//    }
+    public String buildToWin() {
+        if (!currentRoom.getName().equals("university")) {
+            return "You should do this in the University instead of here";
+        } else if (currentRoom.getName().equals("university")) {
+            if (player.getInventory().size() < 6) {
+                return "You need more parts to complete this game";
+            } else if (player.getInventory().size() >= 6) {
+                return "Congratulations, you have won the game! \n"
+                        + "You gathered all the solar panel pieces "
+                        + "and assembled it. You have contributed to a better " 
+                        + "future and gathered knowledge along the way. \n\n"
+                        + "Use the knowledge wisely and make a change where you can!";
+            }
+        }
+        return null;
+    }
 }
