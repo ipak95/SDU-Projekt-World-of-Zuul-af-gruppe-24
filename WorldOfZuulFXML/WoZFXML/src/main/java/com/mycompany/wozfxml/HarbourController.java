@@ -81,6 +81,11 @@ public class HarbourController implements Initializable {
         App.game.setCurrentRoom("Station");
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToViewHelp() throws IOException {
+       App.HelpPopup.display();
+        //App.game. / Insert method or event handler
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

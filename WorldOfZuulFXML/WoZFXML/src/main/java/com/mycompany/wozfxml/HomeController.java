@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import javafx.stage.Popup;
 
 /**
  * FXML Controller class
@@ -78,9 +79,11 @@ public class HomeController implements Initializable {
        QandA.setText(App.game.viewInventory());
         //App.game. / Insert method or event handler
     }
-    
-    
-    
+    @FXML
+    private void switchToViewHelp() throws IOException {
+       App.HelpPopup.display();
+        //App.game. / Insert method or event handler
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

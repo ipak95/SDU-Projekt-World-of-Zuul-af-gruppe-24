@@ -2,6 +2,7 @@ package com.mycompany.wozfxml;
 
 import Domain.Room;
 import Domain.Game;
+import Domain.HelpPopup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,10 +20,13 @@ public class App extends Application {
     
     public static Game game;
     
+    public static HelpPopup HelpPopup;
+        
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 950, 944);
         game = new Game();
+        HelpPopup = new HelpPopup();
         stage.setTitle("World of Zuul (Group 24) - World Of Sool");
         stage.setScene(scene);
         stage.show();

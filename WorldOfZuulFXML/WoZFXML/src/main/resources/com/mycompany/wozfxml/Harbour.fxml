@@ -18,7 +18,7 @@
                   <Font name="System Bold Italic" size="25.0" />
                </font>
             </TextArea>
-            <Button mnemonicParsing="false" text="HELP">
+            <Button fx:id="HelpButton" onAction="#switchToViewHelp" mnemonicParsing="false" text="HELP">
                <HBox.margin>
                   <Insets left="30.0" top="25.0" />
                </HBox.margin>
