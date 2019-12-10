@@ -232,31 +232,31 @@ public class Game {
         switch (currentRoom.getName()) {
             
 
-            case "Downtown":
+            case "downtown":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Downtown.png";
             
-            case "Beach":
+            case "beach":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Beach.png";
 
-            case "Harbour":
+            case "harbour":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Harbour.png";
 
-            case "Home":
+            case "home":
                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Home.png";
 
-            case "Mall":
+            case "mall":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Mall.png";
 
-            case "Park":
+            case "park":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Park.png";
 
-            case "Rooftop":
+            case "rooftop":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Rooftop.png";
 
-            case "Station":
+            case "station":
               return "src/main/resources/com/mycompany/wozfxml/pics/Map_Station.png";
 
-            case "University":
+            case "university":
                return "src/main/resources/com/mycompany/wozfxml/pics/Map_University.png";
 
         }
