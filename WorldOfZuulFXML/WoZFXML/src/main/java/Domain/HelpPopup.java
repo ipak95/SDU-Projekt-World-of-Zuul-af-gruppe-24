@@ -25,7 +25,7 @@ Label label1= new Label("This game is about you wanting to learn more about sola
         + "to get to a new location. Have a look around with the Look-command \n"
         + "and interact with people by using Talk. \n"
         + "\n"
-        + "Collect all the solar panel pieces by answering all the questions correctly \n"
+        + "Collect all the solar panel parts by answering all the questions correctly \n"
         + "and finally build your own solar panel!");
       
      
