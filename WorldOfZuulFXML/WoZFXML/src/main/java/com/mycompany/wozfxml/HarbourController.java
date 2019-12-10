@@ -86,6 +86,11 @@ public class HarbourController implements Initializable {
        App.HelpPopup.display();
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToQuit() throws IOException {
+       App.QuitPopup.display();
+        //App.game. / Insert method or event handler
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
