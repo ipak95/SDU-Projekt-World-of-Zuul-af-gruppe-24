@@ -4,13 +4,15 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.nio.file.Path;
 
 public class Game {
 
     private boolean wantToQuit = false;
     private Player player;
     //private Parser parser;
-    private Room currentRoom;
+    private static Room currentRoom;
 
     private boolean talk;
     private ArrayList<Room> rooms = new ArrayList<>();
@@ -223,6 +225,42 @@ public class Game {
                 break;
 
         }
+    }
+    
+    public static String ShowMap() throws FileNotFoundException  {
+        
+        switch (currentRoom.getName()) {
+            
+
+            case "Downtown":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Downtown.png";
+            
+            case "Beach":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Beach.png";
+
+            case "Harbour":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Harbour.png";
+
+            case "Home":
+               return "src/main/resources/com/mycompany/wozfxml/pics/Map_Home.png";
+
+            case "Mall":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Mall.png";
+
+            case "Park":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Park.png";
+
+            case "Rooftop":
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Rooftop.png";
+
+            case "Station":
+              return "src/main/resources/com/mycompany/wozfxml/pics/Map_Station.png";
+
+            case "University":
+               return "src/main/resources/com/mycompany/wozfxml/pics/Map_University.png";
+
+        }
+        return "Map not found";
     }
 
     public String viewInventory() {

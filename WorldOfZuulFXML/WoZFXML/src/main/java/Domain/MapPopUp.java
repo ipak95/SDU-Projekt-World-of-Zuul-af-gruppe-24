@@ -5,6 +5,7 @@
  */
 package Domain;
 
+import com.mycompany.wozfxml.App;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -25,7 +26,7 @@ public class MapPopUp {
         popupwindow.initModality(Modality.APPLICATION_MODAL);
         popupwindow.setTitle("World of Sool - Map");
 
-        Image image = new Image(new FileInputStream("src/main/resources/com/mycompany/wozfxml/pics/Map_Home.png"));
+        Image image = new Image(new FileInputStream(Game.ShowMap()));
 
         ImageView imageView = new ImageView(image);
 

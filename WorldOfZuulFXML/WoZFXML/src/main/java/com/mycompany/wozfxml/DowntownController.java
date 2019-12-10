@@ -29,6 +29,10 @@ public class DowntownController implements Initializable {
      * Initializes the controller class.
      */
     @FXML
+    private void switchToViewMap() throws IOException {
+       App.mapPopUp.display();
+    }
+    @FXML
     private void switchToHome() throws IOException {
         App.setRoot("Home");
         App.game.setCurrentRoom("Home");

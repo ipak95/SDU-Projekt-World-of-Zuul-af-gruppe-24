@@ -27,6 +27,10 @@ public class BeachController implements Initializable {
     public TextArea QandA;
     
     @FXML
+    private void switchToViewMap() throws IOException {
+       App.mapPopUp.display();
+    }
+    @FXML
     private void switchToLongdesciption() throws IOException {
        longdescription.setText(App.game.lookAround());
     }
