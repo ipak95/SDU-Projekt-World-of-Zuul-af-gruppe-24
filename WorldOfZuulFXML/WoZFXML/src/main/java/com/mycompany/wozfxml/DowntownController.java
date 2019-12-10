@@ -32,80 +32,66 @@ public class DowntownController implements Initializable {
     private void switchToHome() throws IOException {
         App.setRoot("Home");
         App.game.setCurrentRoom("Home");
-        //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToBeach() throws IOException {
         App.setRoot("Beach");
         App.game.setCurrentRoom("Beach");
-        //App.game. / Insert method or event handler
     }
     
      @FXML
     private void switchToHarbour() throws IOException {
         App.setRoot("Harbour");
         App.game.setCurrentRoom("Harbour");
-        //App.game. / Insert method or event handler
     }
     
      @FXML
     private void switchToPark() throws IOException {
         App.setRoot("Park");
         App.game.setCurrentRoom("Park");
-        //App.game. / Insert method or event handler
     }
        
     @FXML
     private void switchToLongdesciption() throws IOException {
        longdescription.setText(App.game.lookAround());
-        //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToTalk() throws IOException {
        QandA.setText(App.game.talkTo());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerA() throws IOException {
        QandA.setText(App.game.answer('a'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerB() throws IOException {
        QandA.setText(App.game.answer('b'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerC() throws IOException {
        QandA.setText(App.game.answer('c'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerD() throws IOException {
        QandA.setText(App.game.answer('d'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToBuild() throws IOException {
        QandA.setText(App.game.buildToWin());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToViewInventory() throws IOException {
        QandA.setText(App.game.viewInventory());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToViewHelp() throws IOException {
        App.HelpPopup.display();
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToQuit() throws IOException {
        App.QuitPopup.display();
-        //App.game. / Insert method or event handler
     }
     
     

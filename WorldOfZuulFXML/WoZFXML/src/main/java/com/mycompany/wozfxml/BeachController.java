@@ -29,60 +29,49 @@ public class BeachController implements Initializable {
     @FXML
     private void switchToLongdesciption() throws IOException {
        longdescription.setText(App.game.lookAround());
-        //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToTalk() throws IOException {
        QandA.setText(App.game.talkTo());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerA() throws IOException {
        QandA.setText(App.game.answer('a'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerB() throws IOException {
        QandA.setText(App.game.answer('b'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerC() throws IOException {
        QandA.setText(App.game.answer('c'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToAnswerD() throws IOException {
        QandA.setText(App.game.answer('d'));
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToBuild() throws IOException {
        QandA.setText(App.game.buildToWin());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToViewInventory() throws IOException {
        QandA.setText(App.game.viewInventory());
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToViewHelp() throws IOException {
        App.HelpPopup.display();
-        //App.game. / Insert method or event handler
     }
     
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
         App.game.setCurrentRoom("Downtown");
-        //App.game. / Insert method or event handler
     }
     @FXML
     private void switchToQuit() throws IOException {
        App.QuitPopup.display();
-        //App.game. / Insert method or event handler
     }
     
     @Override
