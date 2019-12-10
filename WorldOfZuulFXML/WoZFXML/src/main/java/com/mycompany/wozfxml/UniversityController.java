@@ -63,6 +63,10 @@ public class UniversityController implements Initializable {
     private void switchToViewHelp() throws IOException {
        App.HelpPopup.display();
     }
+    @FXML
+    private void switchToViewMap() throws IOException {
+       App.mapPopUp.display();
+    }
     
     @FXML
     private void switchToMall() throws IOException {

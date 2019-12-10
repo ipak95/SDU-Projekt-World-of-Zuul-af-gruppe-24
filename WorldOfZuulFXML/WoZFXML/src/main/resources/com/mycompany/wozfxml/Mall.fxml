@@ -93,7 +93,7 @@
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="238.0" layoutY="10.0" mnemonicParsing="false" text="Map">
+            <Button fx:id="MapButton" onAction="#switchToViewMap" layoutX="238.0" layoutY="10.0" mnemonicParsing="false" text="Map">
                <HBox.margin>
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>

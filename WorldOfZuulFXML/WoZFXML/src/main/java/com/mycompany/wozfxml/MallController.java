@@ -30,6 +30,10 @@ public class MallController implements Initializable {
     private void switchToLongdesciption() throws IOException {
        longdescription.setText(App.game.lookAround());
     }
+    @FXML
+    private void switchToViewMap() throws IOException {
+       App.mapPopUp.display();
+    }
     
     @FXML
     private void switchToTalk() throws IOException {
