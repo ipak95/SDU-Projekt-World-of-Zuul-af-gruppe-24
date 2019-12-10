@@ -3,6 +3,7 @@ package com.mycompany.wozfxml;
 import Domain.Room;
 import Domain.Game;
 import Domain.HelpPopup;
+import Domain.MapPopUp;
 import Domain.QuitPopup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +25,8 @@ public class App extends Application {
     public static HelpPopup HelpPopup;
     
     public static QuitPopup QuitPopup;
+    
+    public static MapPopUp mapPopUp;
         
     @Override
     public void start(Stage stage) throws IOException {
@@ -31,6 +34,7 @@ public class App extends Application {
         game = new Game();
         HelpPopup = new HelpPopup();
         QuitPopup = new QuitPopup();
+        mapPopUp = new MapPopUp();
         stage.setTitle("World of Zuul (Group 24) - World Of Sool");
         stage.setScene(scene);
         stage.show();

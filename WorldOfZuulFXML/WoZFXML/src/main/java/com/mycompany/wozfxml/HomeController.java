@@ -50,6 +50,10 @@ public class HomeController implements Initializable {
         //App.game. / Insert method or event handler
     }
     @FXML
+    private void switchToViewMap() throws IOException {
+       App.mapPopUp.display();
+    }
+    @FXML
     private void switchToAnswerA() throws IOException {
        QandA.setText(App.game.answer('a'));
         //App.game. / Insert method or event handler
