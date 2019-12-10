@@ -15,5 +15,6 @@ Domain\Room.class
 com\mycompany\wozfxml\HomeController.class
 com\mycompany\wozfxml\HarbourController.class
 Domain\Item.class
+Domain\MapPopUp.class
 com\mycompany\wozfxml\DowntownController.class
 com\mycompany\wozfxml\UniversityController.class

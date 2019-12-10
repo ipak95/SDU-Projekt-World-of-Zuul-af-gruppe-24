@@ -52,12 +52,12 @@
                </HBox.margin>
                
             </Button>
-            <Button fx:id="AnswerAButton" disable="true" layoutX="392.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerA" text="Answer A">
+            <Button fx:id="AnswerAButton" layoutX="392.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerA" text="Answer A">
                <HBox.margin>
                   <Insets left="529.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="AnswerBButton" disable="true" layoutX="666.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerB" text="Answer B">
+            <Button fx:id="AnswerBButton" layoutX="666.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerB" text="Answer B">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
@@ -94,12 +94,12 @@
                   <Insets left="50.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="AnswerCButton" disable="true" layoutX="528.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerC" text="Answer C">
+            <Button fx:id="AnswerCButton" layoutX="528.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerC" text="Answer C">
                <HBox.margin>
                   <Insets left="175.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="AnswerDButton" disable="true" layoutX="668.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerD" text="Answer D">
+            <Button fx:id="AnswerDButton" layoutX="668.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToAnswerD" text="Answer D">
                <HBox.margin>
                   <Insets left="20.0" top="40.0" />
                </HBox.margin>
