@@ -169,27 +169,6 @@ public class Game {
         items.put("rooftop", part6);
     }
 
-//    public void play() {
-//        printWelcome();
-//
-//        boolean finished = false;
-//        while (!finished) {
-//            Command command = parser.getCommand();
-//            finished = processCommand(command);
-//        }
-//        System.out.println("Thank you for playing.  Goodbye.");
-//    }
-//
-//    private boolean quit(Command command) {
-//        if (command.hasSecondWord()) {
-//            System.out.println("Quit what?");
-//            System.out.println();
-//            return false;
-//        } else {
-//            return true;
-//        }
-//    }
-//
     public String lookAround() {
         currentRoom.setTalk(true);
         return currentRoom.getLongDescription();

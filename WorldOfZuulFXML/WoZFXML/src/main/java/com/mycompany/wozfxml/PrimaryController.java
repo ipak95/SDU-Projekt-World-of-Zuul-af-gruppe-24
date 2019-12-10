@@ -8,6 +8,5 @@ public class PrimaryController {
     @FXML
     private void switchToHome() throws IOException {
         App.setRoot("Home");
-        //App.game. / Insert method or event handler
     }
 }
