@@ -102,6 +102,11 @@ public class DowntownController implements Initializable {
        App.HelpPopup.display();
         //App.game. / Insert method or event handler
     }
+    @FXML
+    private void switchToQuit() throws IOException {
+       App.QuitPopup.display();
+        //App.game. / Insert method or event handler
+    }
     
     
     @Override

@@ -23,7 +23,7 @@
                   <Insets left="30.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="QUIT" textFill="RED">
+            <Button fx:id="QuitButton" onAction="#switchToQuit" mnemonicParsing="false" text="QUIT" textFill="RED">
                <HBox.margin>
                   <Insets left="50.0" top="25.0" />
                </HBox.margin>
