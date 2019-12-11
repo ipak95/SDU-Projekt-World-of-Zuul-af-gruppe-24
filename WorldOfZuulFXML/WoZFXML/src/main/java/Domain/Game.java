@@ -9,9 +9,7 @@ import java.nio.file.Path;
 
 public class Game {
 
-    private boolean wantToQuit = false;
     private Player player;
-    //private Parser parser;
     private static Room currentRoom;
 
     private boolean talk;
@@ -22,7 +20,6 @@ public class Game {
 
     public Game() {
         createRooms();
-        //parser = new Parser();
         player = new Player();
         createItems();
     }
@@ -113,44 +110,13 @@ public class Game {
                 + "some electronics inside a lab. He looks knowledgeable. Maybe he can help you with assembling the solar panel?",
                 "", "", 'p');
 
-        //"Mapping out" all the rooms and how the are connected (setExit)
-        home.setExit("downtown", downtown);
-
-        downtown.setExit("beach", beach);
-        downtown.setExit("harbour", harbour);
-        downtown.setExit("park", park);
-        downtown.setExit("home", home);
-
-        beach.setExit("downtown", downtown);
-
-        harbour.setExit("station", station);
-        harbour.setExit("downtown", downtown);
-
-        station.setExit("harbour", harbour);
-
-        park.setExit("downtown", downtown);
-        park.setExit("mall", mall);
-
-        mall.setExit("park", park);
-        mall.setExit("rooftop", rooftop);
-        mall.setExit("university", university);
-
-        rooftop.setExit("mall", mall);
-
-        university.setExit("mall", mall);
-
         currentRoom = home;
+        // Sets the first room to home, so once you start the game, the Setter method (Switch at line 150 to 190) does not 
+        // require you to leave home and then go back in to set the first rooms value of "currentRoom" and by that
+        // allowing showMap switch method to work at home in the beginning of the game
+       
+        
 
-        // adding rooms to ArrayList rooms
-        rooms.add(home);
-        rooms.add(downtown);
-        rooms.add(beach);
-        rooms.add(harbour);
-        rooms.add(station);
-        rooms.add(park);
-        rooms.add(mall);
-        rooms.add(rooftop);
-        rooms.add(university);
     }
 
     public void createItems() {
@@ -177,8 +143,8 @@ public class Game {
     }
 
     public String talkTo() {
-                if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
-            return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers() 
+        if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
+            return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers()
                     + "\n (Press answer a, answer b, answer c or answer d to answer)";
         } else {
             return "There's no one to talk to";
@@ -226,15 +192,14 @@ public class Game {
 
         }
     }
-    
-    public static String ShowMap() throws FileNotFoundException  {
-        
+
+    public static String ShowMap() throws FileNotFoundException {
+
         switch (currentRoom.getName()) {
-            
 
             case "downtown":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Downtown.png";
-            
+
             case "beach":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Beach.png";
 
@@ -242,7 +207,7 @@ public class Game {
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Harbour.png";
 
             case "home":
-               return "src/main/resources/com/mycompany/wozfxml/pics/Map_Home.png";
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Home.png";
 
             case "mall":
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Mall.png";
@@ -254,10 +219,10 @@ public class Game {
                 return "src/main/resources/com/mycompany/wozfxml/pics/Map_Rooftop.png";
 
             case "station":
-              return "src/main/resources/com/mycompany/wozfxml/pics/Map_Station.png";
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_Station.png";
 
             case "university":
-               return "src/main/resources/com/mycompany/wozfxml/pics/Map_University.png";
+                return "src/main/resources/com/mycompany/wozfxml/pics/Map_University.png";
 
         }
         return "Map not found";
@@ -267,8 +232,7 @@ public class Game {
         return player.displayInventory();
     }
 
-    // this command checks if the answer given by the player is equal to the String value from correctAnswer
-
+    // this command checks if the answer given by the player is equal to the Char value from correctAnswer
     public String answer(char answer) {
         // If answer is the same as the argument correctAnswer value
         // This makes it so the player can only type an answer if the "talkTo" method has been used in the room
@@ -304,7 +268,7 @@ public class Game {
             } else if (player.getInventory().size() >= 6) {
                 return "Congratulations, you have won the game! \n"
                         + "You gathered all the solar panel pieces "
-                        + "and assembled it. You have contributed to a better " 
+                        + "and assembled it. You have contributed to a better "
                         + "future and gathered knowledge along the way. \n\n"
                         + "Use the knowledge wisely and make a change where you can!";
             }

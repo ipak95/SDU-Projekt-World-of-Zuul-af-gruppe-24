@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.wozfxml;
 
 import java.io.IOException;
@@ -13,17 +9,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.stage.Popup;
 
-/**
- * FXML Controller class
- *
- * @author Kenneth
- */
 public class HomeController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
-           
+
     @FXML
     private void switchToDowntown() throws IOException {
         App.setRoot("Downtown");
@@ -88,7 +76,6 @@ public class HomeController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
     
 }

@@ -17,7 +17,7 @@ public class Room
     private boolean roomHasPerson;
     private boolean talk = false;
     
-
+// constuctor for room
     public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, char correctAnswer)
     {
         this.name = name;
