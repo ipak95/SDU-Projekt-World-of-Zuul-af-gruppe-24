@@ -26,7 +26,6 @@ public class QuitPopup {
 
         layout.getChildren().addAll(label1, button1, button2);
 
-        
         layout.setAlignment(Pos.CENTER);
 
         Scene scene1 = new Scene(layout, 300, 250);
@@ -34,7 +33,5 @@ public class QuitPopup {
         popupwindow.setScene(scene1);
 
         popupwindow.showAndWait();
-
     }
-
 }

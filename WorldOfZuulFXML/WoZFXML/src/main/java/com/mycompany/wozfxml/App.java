@@ -13,21 +13,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
+// JavaFX App
 public class App extends Application {
 
     private static Scene scene;
-    
+
     public static Game game;
-    
+
     public static HelpPopup HelpPopup;
-    
+
     public static QuitPopup QuitPopup;
-    
+
     public static MapPopUp mapPopUp;
-        
+
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 950, 944);
@@ -52,5 +50,4 @@ public class App extends Application {
     public static void load(String[] args) {
         launch();
     }
-
 }
