@@ -118,10 +118,12 @@ public class Game {
         
 
     }
-
+    
+    // items are created here 
     public void createItems() {
         Item part1, part2, part3, part4, part5, part6;
 
+        // Part 1 to 6 are created here and named
         part1 = new Item("wires");
         part2 = new Item("glass panel");
         part3 = new Item("crystalline cells");
@@ -129,6 +131,8 @@ public class Game {
         part5 = new Item("frame");
         part6 = new Item("junction box");
 
+        // Items are put into a hashmap and given a certain key
+        // The key is defined as the room name
         items.put("downtown", part1);
         items.put("harbour", part2);
         items.put("station", part3);
@@ -137,11 +141,15 @@ public class Game {
         items.put("rooftop", part6);
     }
 
+    // Look around that sets currentRoom.setTalk to true
+    // and returns the long description for the current room
     public String lookAround() {
         currentRoom.setTalk(true);
         return currentRoom.getLongDescription();
     }
-
+    
+    // Checks if room has a person and if talk is true then return question
+    // else return there is no one to talk to 
     public String talkTo() {
         if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
             return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers()
@@ -150,7 +158,8 @@ public class Game {
             return "There's no one to talk to";
         }
     }
-
+    
+    // Switch that enables travling between rooms
     public void setCurrentRoom(String Room) {
         switch (Room) {
 
@@ -192,7 +201,8 @@ public class Game {
 
         }
     }
-
+    
+    // Method that returns the correct map image for the current room
     public static String ShowMap() throws FileNotFoundException {
 
         switch (currentRoom.getName()) {
@@ -228,6 +238,7 @@ public class Game {
         return "Map not found";
     }
 
+    // Method that displays inventory
     public String viewInventory() {
         return player.displayInventory();
     }
@@ -259,12 +270,17 @@ public class Game {
         }
     }
 
+    // Metod that enables a player to win the game
     public String buildToWin() {
+        // If current room isnt university then return you should do this...
         if (!currentRoom.getName().equals("university")) {
             return "You should do this in the University instead of here";
+          // If current room is univeristy and the player has less then 6 parts 
+          // return you need more parts...
         } else if (currentRoom.getName().equals("university")) {
             if (player.getInventory().size() < 6) {
                 return "You need more parts to complete this game";
+              // If player has 6 parts return congratulations...
             } else if (player.getInventory().size() >= 6) {
                 return "Congratulations, you have won the game! \n"
                         + "You gathered all the solar panel pieces "
