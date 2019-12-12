@@ -114,11 +114,8 @@ public class Game {
         // Sets the first room to home, so once you start the game, the Setter method (Switch at line 150 to 190) does not 
         // require you to leave home and then go back in to set the first rooms value of "currentRoom" and by that
         // allowing showMap switch method to work at home in the beginning of the game
-       
-        
-
     }
-    
+
     // items are created here 
     public void createItems() {
         Item part1, part2, part3, part4, part5, part6;
@@ -147,18 +144,41 @@ public class Game {
         currentRoom.setTalk(true);
         return currentRoom.getLongDescription();
     }
-    
-    // Checks if room has a person and if talk is true then return question
-    // else return there is no one to talk to 
+
+    // Method used to talk to NPC's
     public String talkTo() {
+
+        // Checks if room has a person and if talk is true
         if (currentRoom.doesRoomHasPerson() && currentRoom.isTalk()) {
-            return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers()
-                    + "\n (Press answer a, answer b, answer c or answer d to answer)";
+            
+            // "Talking with the professor"
+            // If currentRoom is university and player has less than 6 parts
+            // return text
+            if (currentRoom.getName().equals("university") && player.getInventory().size() < 6) {
+                return "Hello there! \n"
+                        + "I think you need more parts to build the solar panel. \n"
+                        + "Go out and find the remaining parts!";
+            
+            // "Talking with the professor"
+            // If currentRoom is university and player has 6 or more parts
+            // return text
+            } else if (currentRoom.getName().equals("university") && player.getInventory().size() >= 6) {
+                return "Fantastic! \n"
+                        + "You found all the parts for the solar panel, let's build it!";
+                
+            // Adds a hint to the player, that quistions are answered with the buttons
+            } else {
+                return currentRoom.getQuestion() + "\n" + currentRoom.getAnswers()
+                        + "\n (Press answer a, answer b, answer c or answer d to answer)";
+            }
+            
+        // If there's no person in the room and talk is false
+        // return text
         } else {
             return "There's no one to talk to";
         }
     }
-    
+
     // Switch that enables travling between rooms
     public void setCurrentRoom(String Room) {
         switch (Room) {
@@ -201,7 +221,7 @@ public class Game {
 
         }
     }
-    
+
     // Method that returns the correct map image for the current room
     public static String ShowMap() throws FileNotFoundException {
 
@@ -243,11 +263,11 @@ public class Game {
         return player.displayInventory();
     }
 
-    // this command checks if the answer given by the player is equal to the Char value from correctAnswer
+    // This method checks if the answer given by the player is equal to the Char value from correctAnswer
     public String answer(char answer) {
+
         // If answer is the same as the argument correctAnswer value
         // This makes it so the player can only type an answer if the "talkTo" method has been used in the room
-
         if (currentRoom.isTalk() == true && currentRoom.getCorrectAnswer() == answer) {
             currentRoom.setRoomHasPerson(false);
             currentRoom.setTalk(false);
@@ -256,9 +276,9 @@ public class Game {
 
             return "You answered correct! \n A part has been added to your inventory";
 
-            //Checks for a person in the room. No reason in printing wrong/correct answer if no person exist in room
+            // Checks for a person in the room. No reason in printing wrong/correct answer if no person exist in room
         } else if (currentRoom.doesRoomHasPerson() == false) {
-            return "No question's or answer's in here";
+            return "No questions or answers in here";
 
             // Hinting the player about talking to the person before answering the question or typing in the answer
         } else if (currentRoom.isTalk() == false) {
@@ -270,17 +290,20 @@ public class Game {
         }
     }
 
-    // Metod that enables a player to win the game
+    // Method that enables a player to win the game
     public String buildToWin() {
-        // If current room isnt university then return you should do this...
+
+        // If current room isnt university then return text
         if (!currentRoom.getName().equals("university")) {
             return "You should do this in the University instead of here";
-          // If current room is univeristy and the player has less then 6 parts 
-          // return you need more parts...
+
+            // If current room is univeristy and the player has less then 6 parts 
+            // return text
         } else if (currentRoom.getName().equals("university")) {
             if (player.getInventory().size() < 6) {
                 return "You need more parts to complete this game";
-              // If player has 6 parts return congratulations...
+
+                // If player has 6 or more parts return text
             } else if (player.getInventory().size() >= 6) {
                 return "Congratulations, you have won the game! \n"
                         + "You gathered all the solar panel pieces "

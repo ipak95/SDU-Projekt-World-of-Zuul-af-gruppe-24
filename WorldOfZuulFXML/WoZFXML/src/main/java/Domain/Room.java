@@ -4,9 +4,8 @@ import java.util.Set;
 import java.util.HashMap;
 import java.util.Iterator;
 
+public class Room {
 
-public class Room 
-{
     private String name;
     private String description;
     private String longDescription;
@@ -16,10 +15,9 @@ public class Room
     private HashMap<String, Room> exits;
     private boolean roomHasPerson;
     private boolean talk = false;
-    
-// constuctor for room
-    public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, char correctAnswer)
-    {
+
+    // constuctor for room
+    public Room(String name, String description, boolean hasPerson, String longDescription, String question, String answers, char correctAnswer) {
         this.name = name;
         this.description = description;
         this.longDescription = longDescription;
@@ -53,48 +51,38 @@ public class Room
     public boolean isTalk() {
         return talk;
     }
-    
 
     public boolean doesRoomHasPerson() {
         return roomHasPerson;
         //True = Yes / False = No
     }
-    
 
     public void setRoomHasPerson(boolean roomHasPerson) {
-        this.roomHasPerson = roomHasPerson; 
+        this.roomHasPerson = roomHasPerson;
     }
-    
 
-    public void setExit(String direction, Room neighbor) 
-    {
+    public void setExit(String direction, Room neighbor) {
         exits.put(direction, neighbor);
     }
 
-    public String getLongDescription()
-    {
+    public String getLongDescription() {
         return longDescription;
     }
 
-    public String getShortDescription()
-    {
+    public String getShortDescription() {
         return "You are " + description + ".\n" + getExitString();
     }
 
-    private String getExitString()
-    {
+    private String getExitString() {
         String returnString = "Exits:";
         Set<String> keys = exits.keySet();
-        for(String exit : keys) {
+        for (String exit : keys) {
             returnString += " " + exit;
         }
         return returnString;
     }
 
-    public Room getExit(String direction) 
-    {
+    public Room getExit(String direction) {
         return exits.get(direction);
     }
-    
 }
-
